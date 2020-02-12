@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "username": "tuandx",
+      "email": "xuantuanncth@gmail.com",
+      "password": "123456",
+      "confirm_password": "123456"
+    },
+    {
+      "username": "Do Xuan Tuan",
+      "email": "xuantuanncth@gmail.com",
+      "password": "123456",
+      "confirm_password": "123456"
+    }
+  ]
+}
