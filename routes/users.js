@@ -19,6 +19,7 @@ router.get('/', function(req, res, next) {
 //   res.render('User/index',{user:nameMatcher});
 // });
 
+//Test git 123
 router.get('/test', function(req, res, next) {
     res.render('Users/register');
 })
