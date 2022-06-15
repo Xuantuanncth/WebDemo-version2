@@ -253,8 +253,8 @@ html(lang='en')
     nav.navbar.navbar-default.navbar-expand-lg.navbar-light
       .navbar-header.d-flex.col
         a.navbar-brand(href='#')
-          | Xuan
-          b Tuan
+          | Dash
+          b Board
         button.navbar-toggle.navbar-toggler.ml-auto(type='button', data-target='#navbarCollapse', data-toggle='collapse')
           span.navbar-toggler-icon
           span.icon-bar
@@ -264,35 +264,11 @@ html(lang='en')
       #navbarCollapse.collapse.navbar-collapse.justify-content-start
         ul.nav.navbar-nav
           li.nav-item
-            a.nav-link(href='/users') Home
+            a.nav-link(href='/users') Viewer
           li.nav-item
-            a.nav-link(href='#') About
-          li.nav-item.dropdown
-            a.nav-link.dropdown-toggle(data-toggle='dropdown', href='#')
-              | Services 
-              b.caret
-            ul.dropdown-menu
-              li
-                a.dropdown-item(href='#') Web Design
-              li
-                a.dropdown-item(href='#') Web Development
-              li
-                a.dropdown-item(href='#') Graphic Design
-              li
-                a.dropdown-item(href='#') Digital Marketing
+            a.nav-link(href='#') Control Device
           li.nav-item.active
-            a.nav-link(href='#') Pricing
-          li.nav-item
-            a.nav-link(href='#') Blog
-          li.nav-item
-            a.nav-link(href='#') Contact
-          li.nav-item
-            snap=user
-        form.navbar-form.form-inline
-          .input-group.search-box
-            input#search.form-control(type='text', placeholder='Search here...')
-            span.input-group-addon
-              i.material-icons 
+            a.nav-link(href='#') Chart
         ul.nav.navbar-nav.navbar-right.ml-auto
           li.nav-item
             a.nav-link.dropdown-toggle(href='/users/login') Đăng Nhập

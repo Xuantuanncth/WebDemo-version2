@@ -1,2 +1,6 @@
 # WebDemo-version2
-Homework
+ Init 
+ npm install
+
+ Run
+ npm start
