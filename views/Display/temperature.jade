@@ -1,9 +1,72 @@
 doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Display Information
-    body 
-        h4 Em update o day
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    |     
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    |     
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    |     
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+    |     
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js')
+    |     
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    |     
+    link(rel='stylesheet', href='/stylesheets/style2.css')
+    |     
+    title Display Information
+  |   
+  body
+    .container.d-flex.justify-content-center
+      .weather
+        .row
+          .col-md-6
+            .card
+              span.icon
+                img.img-fluid(src='https://img.icons8.com/emoji/96/000000/sun-emoji.png')
+              |               
+              .title
+                p Nhi&#x1EC7;t &dstrok;&#x1ED9;
+              |               
+              .temp
+                | +20 
+                sup &deg;
+                | C
+          |           
+          .col-md-6
+            .card
+              span.icon
+                img.img-fluid(src='images/ph.png')
+              |               
+              .title
+                p &Dstrok;&#x1ED9; pH
+              |               
+              .temp
+                | 18
+                sup &deg;
+        |         
+        .row
+          .col-md-6
+            .card
+              span.icon
+                img(src='/images/oxi.png')
+              |               
+              .title
+                p &Dstrok;&#x1ED9; oxi h&ograve;a tan
+              |               
+              .temp
+                | 17
+                sup &deg;
+          |           
+          .col-md-6
+            v.card
+              span.icon
+                img(src='/images/opaque.png')
+              |               
+              .title
+                p &Dstrok;&#x1ED9; &dstrok;&#x1EE5;c
+              |               
+              .temp
+                | +15
+                sup &deg;
