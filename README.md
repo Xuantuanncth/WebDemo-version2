@@ -1,6 +1,6 @@
 # WebDemo-version2
- Init 
+ Init:  
  npm install
 
- Run
+ Run:
  npm start

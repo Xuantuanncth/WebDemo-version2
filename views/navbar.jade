@@ -1,0 +1,24 @@
+nav.navbar.navbar-default.navbar-expand-lg.navbar-light
+      .navbar-header.d-flex.col
+        a.navbar-brand(href='/')
+          | Dash
+          b Board
+        button.navbar-toggle.navbar-toggler.ml-auto(type='button', data-target='#navbarCollapse', data-toggle='collapse')
+          span.navbar-toggler-icon
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+      // Collection of nav links, forms, and other content for toggling
+      #navbarCollapse.collapse.navbar-collapse.justify-content-start
+        ul.nav.navbar-nav
+          li.nav-item
+            a.nav-link(href='/display') Viewer
+          li.nav-item
+            a.nav-link(href='/control') Control Device
+          li.nav-item.active
+            a.nav-link(href='#') Chart
+        ul.nav.navbar-nav.navbar-right.ml-auto
+            li.nav-item
+            a.btn.btn-primary.dropdown-toggle.get-started-btn.mt-1.mb-1(href='/users/login') Đăng Nhập
+            //li.nav-item
+            //a.btn.btn-primary.dropdown-toggle.get-started-btn.mt-1.mb-1(href='/users/register') Đăng Kí

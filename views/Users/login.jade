@@ -123,7 +123,7 @@ html(lang='en')
       .modal-content
         .modal-header
           h4.modal-title Đăng Nhập
-          button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+          button#btnClose.close(type='button' data-dismiss='modal' aria-hidden='true') ×
         .modal-body
           form(action='/users/user/login', method='post')
             .form-group
@@ -143,3 +143,6 @@ html(lang='en')
         .modal-footer
           | Don't have an account? 
           a(href='/users/register') Create one
+    script.
+      document.getElementById('btnClose').onclick = function() { location.href = "/"}
+

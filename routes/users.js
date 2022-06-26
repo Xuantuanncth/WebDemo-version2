@@ -2,7 +2,7 @@ var express = require('express');
 var db = require('../db')
 
 var router = express.Router();
-
+var isUserLogin = false;
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -44,8 +44,15 @@ router.post('/user/login', function(req, res, next) {
         return user.password.indexOf(pass_req) !== -1;
     });
     if (nameMatcher && passMatcher) {
+        console.log("Login oke")
+        isUserLogin = true;
         res.redirect('/');
+    } else {
+        console.log("Password or Username Error")
     }
 });
 
-module.exports = router;
+module.exports = {
+    router,
+    isUserLogin
+};
