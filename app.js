@@ -6,7 +6,7 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 const multer = require('multer'); // v1.0.5
 const upload = multer(); // for parsing multipart/form-data
-
+const session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -15,6 +15,13 @@ var controlDevice = require('./routes/control');
 
 
 var app = express();
+
+app.use(session({
+    resave: true,
+    saveUninitialized: true,
+    secret: "somesecret",
+    cookie: { maxAge: 6000 }
+}))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

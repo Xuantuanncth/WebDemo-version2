@@ -1,6 +1,5 @@
 var express = require('express');
-var db = require('../db')
-
+var db = require('../db');
 var router = express.Router();
 var isUserLogin = false;
 
@@ -44,11 +43,12 @@ router.post('/user/login', function(req, res, next) {
         return user.password.indexOf(pass_req) !== -1;
     });
     if (nameMatcher && passMatcher) {
-        console.log("Login oke")
-        isUserLogin = true;
+        req.session.userId = uname_req;
+        console.log(req.session)
         res.redirect('/');
     } else {
         console.log("Password or Username Error")
+        res.send("Invalid user name or password")
     }
 });
 
