@@ -4,7 +4,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
     console.log("request: ", req.session)
     if (req.session.userId) {
-        res.render('Control/Control', { isLogin: true });
+        res.render('Control/Control', { isLogin: true, autoCtr: false });
     } else {
         console.log('User no login')
         res.send("Please Login")

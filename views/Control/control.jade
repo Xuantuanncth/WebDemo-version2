@@ -19,37 +19,40 @@ html(lang='en')
           tr
             td Thiết bị 1
             td
-              input#ctl_device1(type='checkbox' checked='false' data-toggle='toggle' data-width='100')
+              input#ctl_device1(type='checkbox' checked='' data-toggle='toggle' data-width='100')
             td Trạng thái thiết bị 1
             td
               img.img-fluid(src='/images/led1.png' alt="Image Title")
           tr
             td Thiết bị 2
             td
-              input#ctl_device2(type='checkbox' checked='false' data-toggle='toggle' data-width='100')
+              input#ctl_device2(type='checkbox' checked='' data-toggle='toggle' data-width='100')
             td Trạng thái thiết bị 2
             td
               img.img-fluid(src='/images/led2.png' alt="Image Title")
           tr
             td Điều khiển tự động
             td
-              input#ctl_device3(type='checkbox' checked='false' data-toggle='toggle' data-width='100' onchange='checkAutoClick(this)')
+              input#ctl_auto(type='checkbox' data-toggle='toggle' data-width='100' onchange='checkAutoClick()')
             td Trạng thái Auto
             td
               img.img-fluid(src='/images/led1.png' alt="Image Title")
     script.
       var device1 = document.getElementById("ctl_device1");
       var device2 = document.getElementById("ctl_device2");
-      var auto = document.getElementById("ctl_device3");
-      function checkAutoClick(auto) {
-        console.log("Check box change: ",auto.checked);
-        console.log('Device 1: ', device1.checked)
-        if(device1.checked == true) {
-            device1.bootstrapToggle('Off');
-            device1.checked = false;
-        } else {
-            device1.bootstrapToggle('On');
-            device1.checked = true;
+      var auto = document.getElementById("ctl_auto");
+      //- Check case if enable Auto will disable control mode
+      function checkAutoClick() {
+        console.log('Auto check ', auto.checked  )
+        if(auto.checked == true)
+        {
+            $('#ctl_device1').bootstrapToggle('disable');
+            $('#ctl_device2').bootstrapToggle('disable');
+        } 
+        else 
+        {
+            $('#ctl_device1').bootstrapToggle('enable');
+            $('#ctl_device2').bootstrapToggle('enable');
         }
-
       }
+      console.log("autoCtr: ",autoCtr)
