@@ -4,10 +4,10 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
     console.log("request: ", req.session)
     if (req.session.userId) {
-        res.render('Display/temperature');
+        res.render('Display/temperature', { isLogin: true });
     } else {
         console.log('User no login')
-        res.send("Error user name or password")
+        res.send("Please Login")
     }
 })
 

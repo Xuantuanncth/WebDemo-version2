@@ -1,7 +1,6 @@
 var express = require('express');
 var db = require('../db');
 var router = express.Router();
-var isUserLogin = false;
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -52,7 +51,4 @@ router.post('/user/login', function(req, res, next) {
     }
 });
 
-module.exports = {
-    router,
-    isUserLogin
-};
+module.exports = router;

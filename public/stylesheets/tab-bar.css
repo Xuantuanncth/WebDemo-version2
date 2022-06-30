@@ -3,9 +3,10 @@ body {
     font-family: 'Varela Round', sans-serif;
 }
 
-.container {
+
+/* .container {
     position: relative;
-}
+} */
 
 .form-control {
     box-shadow: none;

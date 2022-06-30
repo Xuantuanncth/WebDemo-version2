@@ -16,9 +16,14 @@ nav.navbar.navbar-default.navbar-expand-lg.navbar-light
           li.nav-item
             a.nav-link(href='/control') Control Device
           li.nav-item.active
-            a.nav-link(href='#') Chart
+            a.nav-link(href='/chart') Chart
+          li.nav-item.active
+            a.nav-link(href='/setting') Setting Time
         ul.nav.navbar-nav.navbar-right.ml-auto
             li.nav-item
-            a.btn.btn-primary.dropdown-toggle.get-started-btn.mt-1.mb-1(href='/users/login') Đăng Nhập
+            if isLogin
+                img.img-fluid(src='/icon/user.png' alt="Image Title")
+            else 
+                a.btn.btn-primary.dropdown-toggle.get-started-btn.mt-1.mb-1(href='/users/login') Đăng Nhập
             //li.nav-item
             //a.btn.btn-primary.dropdown-toggle.get-started-btn.mt-1.mb-1(href='/users/register') Đăng Kí

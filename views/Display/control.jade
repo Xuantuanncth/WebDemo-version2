@@ -9,7 +9,7 @@ html(lang='en')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
     link(href='https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css' rel='stylesheet')
     script(src='https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js')
-    link(rel='stylesheet' href='../../public/stylesheets/style2.css')
+    link(rel='stylesheet' href='/stylesheets/style2.css')
     title Display Information
   body
     .container.d-flex.justify-content-center
@@ -21,21 +21,28 @@ html(lang='en')
           tr
             td Thiết bị 1
             td
-              input(type='checkbox' checked='' data-toggle='toggle' data-width='100')
+              input#ctl_device1(type='checkbox' checked='' data-toggle='toggle' data-width='100')
             td Trạng thái thiết bị 1
             td
-              img.img-fluid(src='../../public/images/led1.png')
+              img.img-fluid(src='/images/led1.png' alt="Image Title")
           tr
             td Thiết bị 2
             td
-              input(type='checkbox' checked='' data-toggle='toggle' data-width='100')
+              input#ctl_device2(type='checkbox' checked='' data-toggle='toggle' data-width='100')
             td Trạng thái thiết bị 2
             td
-              img.img-fluid(src='../../public/images/led2.png')
+              img.img-fluid(src='../images/led2.png' alt="Image Title")
           tr
             td Điều khiển tự động
             td
-              input(type='checkbox' checked='' data-toggle='toggle' data-width='100')
+              input#ctl_device3(type='checkbox' checked='' data-toggle='toggle' data-width='100')
             td Trạng thái Auto
             td
-              img.img-fluid(src='../../public/images/led1.png')
+              img.img-fluid(src='../images/led1.png' alt="Image Title")
+    script.
+      var crl_device1 = false;
+      var crl_device2 = false;
+      var crl_device3 = false;
+      document.getElementById('ctl_device1').onclick = ()=>{
+        
+      }
