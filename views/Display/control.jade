@@ -1,0 +1,41 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    link(href='https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css' rel='stylesheet')
+    script(src='https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js')
+    link(rel='stylesheet' href='../../public/stylesheets/style2.css')
+    title Display Information
+  body
+    .container.d-flex.justify-content-center
+      table.table.table-striped-columns
+        thead
+          tr.table-primary
+            th(colspan='4' style='margin: 50px; ;text-align: center; font-size:xx-large; color: rgb(255, 152, 33);')   Điều khiển thiết bị  
+        tbody.table-group-divider
+          tr
+            td Thiết bị 1
+            td
+              input(type='checkbox' checked='' data-toggle='toggle' data-width='100')
+            td Trạng thái thiết bị 1
+            td
+              img.img-fluid(src='../../public/images/led1.png')
+          tr
+            td Thiết bị 2
+            td
+              input(type='checkbox' checked='' data-toggle='toggle' data-width='100')
+            td Trạng thái thiết bị 2
+            td
+              img.img-fluid(src='../../public/images/led2.png')
+          tr
+            td Điều khiển tự động
+            td
+              input(type='checkbox' checked='' data-toggle='toggle' data-width='100')
+            td Trạng thái Auto
+            td
+              img.img-fluid(src='../../public/images/led1.png')
