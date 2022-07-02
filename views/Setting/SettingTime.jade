@@ -1,7 +1,106 @@
 doctype html
 html(lang='en')
   head
-    include ../header.jade
-    link(rel='stylesheet', href='/stylesheets/style2.css')
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    // Boostrap 3
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    // toggle
+    link(href='https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css' rel='stylesheet')
+    script(src='https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js')
+    // <link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.css">
+    script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js')
+    link(rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/css/bootstrap-datetimepicker.min.css')
+    link(rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/css/bootstrap-datetimepicker-standalone.css')
+    script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/js/bootstrap-datetimepicker.min.js')
+    link(rel='stylesheet' href='../../public/stylesheets/style2.css')
+    title Setting Time
   body
-    include ../navbar.jade
+    .container.d-flex.justify-content-center
+      table.table.table-striped-columns
+        thead
+          tr.table-primary
+            th(colspan='4' style='margin: 50px; ;text-align: center; font-size:xx-large; color: rgb(255, 152, 33);')   Điều khiển thiết bị  
+        tbody.table-group-divider
+          tr
+            td Thiết bị 1
+            td
+              input(type='checkbox' checked='' data-toggle='toggle' data-width='100')
+            td
+              | Thời gian bật
+              br
+              .form-group
+                #datetimepicker1_on.input-group.date
+                  input.form-control(type='text')
+                  span.input-group-addon
+                    span.glyphicon.glyphicon-calendar
+            td
+              | Thời gian tắt
+              br
+              .form-group
+                #datetimepicker1_off.input-group.date
+                  input.form-control(type='text')
+                  span.input-group-addon
+                    span.glyphicon.glyphicon-calendar
+          tr
+            td Thiết bị 2
+            td
+              input(type='checkbox' checked='' data-toggle='toggle' data-width='100')
+            td
+              | Thời gian bật
+              br
+              .form-group
+                #datetimepicker2_on.input-group.date
+                  input.form-control(type='text')
+                  span.input-group-addon
+                    span.glyphicon.glyphicon-calendar
+            td
+              | Thời gian tắt
+              br
+              .form-group
+                #datetimepicker2_off.input-group.date
+                  input.form-control(type='text')
+                  span.input-group-addon
+                    span.glyphicon.glyphicon-calendar
+          tr
+            td Điều khiển tự động
+            td
+              input(type='checkbox' checked='' data-toggle='toggle' data-width='100')
+            td
+              | Thời gian bật
+              br
+              .form-group
+                #datetimepickerAuto_on.input-group.date
+                  input.form-control(type='text')
+                  span.input-group-addon
+                    span.glyphicon.glyphicon-calendar
+            td
+              | Thời gian tắt
+              br
+              .form-group
+                #datetimepickerAuto_off.input-group.date
+                  input.form-control(type='text')
+                  span.input-group-addon
+                    span.glyphicon.glyphicon-calendar
+    script.
+      $(function(){
+      $('#datetimepicker1_on').datetimepicker();
+      });
+      $(function(){
+      $('#datetimepicker1_off').datetimepicker();
+      });
+      $(function(){
+      $('#datetimepicker2_on').datetimepicker();
+      });
+      $(function(){
+      $('#datetimepicker2_off').datetimepicker();
+      });
+      $(function(){
+      $('#datetimepickerAuto_on').datetimepicker();
+      });
+      $(function(){
+      $('#datetimepickerAuto_off').datetimepicker();
+      });
