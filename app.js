@@ -1,23 +1,31 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var bodyParser = require('body-parser');
+const createError = require('http-errors');
+const express = require('express');
+const http = require('http');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const bodyParser = require('body-parser');
 const multer = require('multer'); // v1.0.5
 const upload = multer(); // for parsing multipart/form-data
 const session = require('express-session');
+const { Server } = require('socket.io');
+const hbs = require('hbs');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var displayRouter = require('./routes/display');
-var controlDevice = require('./routes/control');
-var chartData = require('./routes/chart');
-var settingTime = require('./routes/settingtime');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+const displayRouter = require('./routes/display');
+const controlDevice = require('./routes/control');
+const chartData = require('./routes/chart');
+const settingTime = require('./routes/settingTime');
 
 
-var app = express();
+const app = express();
+const server = http.createServer(app);
+const io = new Server(server);
 
+const port = process.env.PORT || 3000;
+
+// setup session
 const oneDay = 1000 * 60 * 60 * 24;
 app.use(session({
     resave: true,
@@ -27,8 +35,11 @@ app.use(session({
 }))
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+
+const partialsPath = path.join(__dirname + '/views/partials')
+app.set('views', path.join(__dirname + '/views'));
+app.set('view engine', 'hbs');
+hbs.registerPartials(partialsPath)
 
 app.use(bodyParser.json()) // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -52,14 +63,31 @@ app.use(function(req, res, next) {
 });
 
 // error handler
-app.use(function(err, req, res, next) {
-    // set locals, only providing error in development
-    res.locals.message = err.message;
-    res.locals.error = req.app.get('env') === 'development' ? err : {};
+// app.use(function(err, req, res, next) {
+//     // set locals, only providing error in development
+//     res.locals.message = err.message;
+//     res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-    // render the error page
-    res.status(err.status || 500);
-    res.render('error');
-});
+//     // render the error page
+//     res.status(err.status || 500);
+//     res.render('error');
+// });
 
-module.exports = app;
+
+io.on('connection', (socket) => {
+    console.log('New socket connection');
+
+    socket.on('join', (option, callback) => {
+        console.log(`ID: ${socket.id} , Data: ${option.data}`);
+    })
+
+
+    socket.on('disconnect', () => {
+        console.log(`User disconnect ${socket.id}`)
+    })
+
+})
+
+server.listen(port, () => {
+    console.log(`Server start up on port ${port}`);
+})

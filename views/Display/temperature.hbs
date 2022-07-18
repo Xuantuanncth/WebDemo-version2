@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{!-- <link rel="stylesheet" href="/stylesheets/style2.css"> --}}
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/stylesheets/tab-bar.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css"> </style>
+</head>
+<body>
+   
+  <div class="container">
+    {{>header}}
+    <div class="weather">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card"><span class="icon"><img class="img-fluid" src="https://img.icons8.com/emoji/96/000000/sun-emoji.png"></span>
+            <div class="title">
+              <p>Nhi&#x1EC7;t &dstrok;&#x1ED9;</p>
+            </div>
+            <div class="temp">+20 <sup>&deg;</sup>C</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card"><span class="icon"><img class="img-fluid" src="images/ph.png"></span>
+            <div class="title">
+              <p>&Dstrok;&#x1ED9; pH</p>
+            </div>
+            <div class="temp">18<sup>&deg;</sup></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card"><span class="icon"><img src="/images/oxi.png"></span>
+            <div class="title">
+              <p>&Dstrok;&#x1ED9; oxi h&ograve;a tan</p>
+            </div>
+            <div class="temp">17<sup>&deg;</sup></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <v class="card"><span class="icon"><img src="/images/opaque.png"></span>
+            <div class="title">
+              <p>&Dstrok;&#x1ED9; &dstrok;&#x1EE5;c</p>
+            </div>
+            <div class="temp">+15<sup>&deg;</sup></div>
+          </v>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

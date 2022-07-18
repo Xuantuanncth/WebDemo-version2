@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/stylesheets/tab-bar.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+    <title>Setting Time</title>
+</head>
+
+<body>
+  <div class="container">
+    {{>header}}
+    <table class="table table-striped-columns">
+      <thead>
+        <tr class="table-primary">
+          <th colspan="4" style="margin: 50px; ;text-align: center; font-size:xx-large; color: rgb(255, 152, 33);"> Điều khiển thiết bị </th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <tr>
+          <td>Thiết bị 1</td>
+          <td>
+            <input type="checkbox" checked="" data-toggle="toggle" data-width="100">
+          </td>
+          <td>Thời gian bật<br>
+            <div class="form-group">
+              <div class="input-group date" id="datetimepicker1_on">
+                <input class="form-control" type="text"><span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              </div>
+            </div>
+          </td>
+          <td>Thời gian tắt<br>
+            <div class="form-group">
+              <div class="input-group date" id="datetimepicker1_off">
+                <input class="form-control" type="text"><span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Thiết bị 2</td>
+          <td>
+            <input type="checkbox" checked="" data-toggle="toggle" data-width="100">
+          </td>
+          <td>Thời gian bật<br>
+            <div class="form-group">
+              <div class="input-group date" id="datetimepicker2_on">
+                <input class="form-control" type="text"><span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              </div>
+            </div>
+          </td>
+          <td>Thời gian tắt<br>
+            <div class="form-group">
+              <div class="input-group date" id="datetimepicker2_off">
+                <input class="form-control" type="text"><span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Điều khiển tự động</td>
+          <td>
+            <input type="checkbox" checked="" data-toggle="toggle" data-width="100">
+          </td>
+          <td>Thời gian bật<br>
+            <div class="form-group">
+              <div class="input-group date" id="datetimepickerAuto_on">
+                <input class="form-control" type="text"><span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              </div>
+            </div>
+          </td>
+          <td>Thời gian tắt<br>
+            <div class="form-group">
+              <div class="input-group date" id="datetimepickerAuto_off">
+                <input class="form-control" type="text"><span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script>
+    $(function() {
+      $('#datetimepicker1_on').datetimepicker();
+    });
+    $(function() {
+      $('#datetimepicker1_off').datetimepicker();
+    });
+    $(function() {
+      $('#datetimepicker2_on').datetimepicker();
+    });
+    $(function() {
+      $('#datetimepicker2_off').datetimepicker();
+    });
+    $(function() {
+      $('#datetimepickerAuto_on').datetimepicker();
+    });
+    $(function() {
+      $('#datetimepickerAuto_off').datetimepicker();
+    });
+  </script>
+</body>
+
+</html>

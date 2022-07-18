@@ -4,9 +4,10 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
     if (req.session.userId) {
-        res.render('home', { title: "Dash Board", isLogin: true });
+        res.render('index', { title: "Dash Board", isLogin: true });
     } else {
-        res.render('home', { title: "Dash Board", isLogin: false });
+        res.render('index', { title: "Dash Board", isLogin: false });
+        // res.render('index');
     }
 });
 

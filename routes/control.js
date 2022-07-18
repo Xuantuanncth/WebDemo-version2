@@ -3,12 +3,13 @@ var router = express.Router();
 
 router.get('/', function(req, res, next) {
     console.log("request: ", req.session)
-    if (req.session.userId) {
-        res.render('Control/Control', { isLogin: true, autoCtr: false });
-    } else {
-        console.log('User no login')
-        res.send("Please Login")
-    }
+    res.render('Control/Control', { isLogin: true, autoCtr: false });
+    // if (req.session.userId) {
+    //     res.render('Control/Control', { isLogin: true, autoCtr: false });
+    // } else {
+    //     console.log('User no login')
+    //     res.send("Please Login")
+    // }
 })
 
 module.exports = router;

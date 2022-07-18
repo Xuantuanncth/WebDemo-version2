@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/stylesheets/tab-bar.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+</head>
+
+<body>
+    
+  <div class="container">
+    {{>header}}
+    <table class="table table-striped-columns">
+      <thead>
+        <tr class="table-primary">
+          <th colspan="4" style="margin: 50px; ;text-align: center; font-size:xx-large; color: rgb(255, 152, 33);"> Điều khiển thiết bị </th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <tr>
+          <td>Thiết bị 1</td>
+          <td>
+            <input id="ctl_device1" type="checkbox" checked="" data-toggle="toggle" data-width="100">
+          </td>
+          <td>Trạng thái thiết bị 1</td>
+          <td><img class="img-fluid" src="/images/led1.png" alt="Image Title"></td>
+        </tr>
+        <tr>
+          <td>Thiết bị 2</td>
+          <td>
+            <input id="ctl_device2" type="checkbox" checked="" data-toggle="toggle" data-width="100">
+          </td>
+          <td>Trạng thái thiết bị 2</td>
+          <td><img class="img-fluid" src="/images/led2.png" alt="Image Title"></td>
+        </tr>
+        <tr>
+          <td>Điều khiển tự động</td>
+          <td>
+            <input id="ctl_auto" type="checkbox" data-toggle="toggle" data-width="100" onchange="checkAutoClick()">
+          </td>
+          <td>Trạng thái Auto</td>
+          <td><img class="img-fluid" src="/images/led1.png" alt="Image Title"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script>
+    var device1 = document.getElementById("ctl_device1");
+    var device2 = document.getElementById("ctl_device2");
+    var auto = document.getElementById("ctl_auto");
+    //- Check case if enable Auto will disable control mode
+    function checkAutoClick() {
+      console.log('Auto check ', auto.checked)
+      if (auto.checked == true) {
+        $('#ctl_device1').bootstrapToggle('disable');
+        $('#ctl_device2').bootstrapToggle('disable');
+      } else {
+        $('#ctl_device1').bootstrapToggle('enable');
+        $('#ctl_device2').bootstrapToggle('enable');
+      }
+    }
+    console.log("autoCtr: ", autoCtr)
+  </script>
+</body>
+
+</html>
