@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="/stylesheets/tab-bar.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style type="text/css"> </style>
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'><link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/style2.css">
 </head>
 <body>
    
@@ -18,42 +21,72 @@
     <div class="weather">
       <div class="row">
         <div class="col-md-6">
-          <div class="card"><span class="icon"><img class="img-fluid" src="https://img.icons8.com/emoji/96/000000/sun-emoji.png"></span>
-            <div class="title">
-              <p>Nhi&#x1EC7;t &dstrok;&#x1ED9;</p>
+          <!-- partial:index.partial.html -->
+          <article class="box weather">
+            <div class="icon bubble black">
+              <div class="spin">
+                <img src="https://img.icons8.com/emoji/96/000000/sun-emoji.png">
+              </div>
             </div>
-            <div class="temp">+20 <sup>&deg;</sup>C</div>
-          </div>
+            
+            <h1>Nhiệt độ</h1>
+            <span class="temp">23&deg;C</span>
+          </article>
+          <!-- partial -->
         </div>
         <div class="col-md-6">
-          <div class="card"><span class="icon"><img class="img-fluid" src="images/ph.png"></span>
-            <div class="title">
-              <p>&Dstrok;&#x1ED9; pH</p>
+          <!-- partial:index.partial.html -->
+          <article class="box weather">
+            <div class="icon bubble black">
+              <div class="spin">
+                <img src="images/ph.png">
+              </div>
             </div>
-            <div class="temp">18<sup>&deg;</sup></div>
-          </div>
+            
+            <h1>Độ pH</h1>
+            <span class="temp">23&deg;</span>
+
+          </article>
+          <!-- partial -->
         </div>
       </div>
       <div class="row">
         <div class="col-md-6">
-          <div class="card"><span class="icon"><img src="/images/oxi.png"></span>
-            <div class="title">
-              <p>&Dstrok;&#x1ED9; oxi h&ograve;a tan</p>
+          <!-- partial:index.partial.html -->
+          <article class="box weather">
+            <div class="icon bubble black">
+              <div class="spin">
+                <img src="images/oxi.png">
+              </div>
             </div>
-            <div class="temp">17<sup>&deg;</sup></div>
-          </div>
+            
+            <h1>Độ oxi hòa tan</h1>
+            <span class="temp">23&deg;</span>
+
+          </article>
+          <!-- partial -->
         </div>
         <div class="col-md-6">
-          <v class="card"><span class="icon"><img src="/images/opaque.png"></span>
-            <div class="title">
-              <p>&Dstrok;&#x1ED9; &dstrok;&#x1EE5;c</p>
+          <!-- partial:index.partial.html -->
+          <article class="box weather">
+            <div class="icon bubble black">
+              <div class="spin">
+                <img src="images/opaque.png">
+              </div>
             </div>
-            <div class="temp">+15<sup>&deg;</sup></div>
-          </v>
+            
+            <h1>Độ đục</h1>
+            <span class="temp">23&deg;</span>
+
+          </article>
+          <!-- partial -->
         </div>
       </div>
     </div>
   </div>
+
+
+
 </body>
 
 </html>
