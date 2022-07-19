@@ -102,6 +102,7 @@
                   <button class="btn btn-outline-secondary" type="button">Set</button>
                 </div>
               </div>
+<<<<<<< Updated upstream
             </td>
             <td>
               <div class="input-group mb-3" style="display: table;">
@@ -123,6 +124,29 @@
                 <div class="input-group-append" style="display: table-cell;">
                   <button class="btn btn-outline-secondary" type="button">Set</button>
                 </div>
+=======
+            </div>
+          </td>
+        </tbody>
+      </tr>
+      <tr>
+        <tbody style="display:none" id="setRange3">
+          <td>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Nhiệt Độ MAX" aria-label="Độ PH MAX"
+                aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Set</button>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Nhiệt Độ MIN" aria-label="Độ PH MIN"
+                aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Set</button>
+>>>>>>> Stashed changes
               </div>
             </td>
             <td>
@@ -161,77 +185,7 @@
       </tbody>
     </table>
   </div>
-  <script>
-    let mayBom = document.getElementById("ctl_mayBom");
-    var bomOxi = document.getElementById("ctl_bomOxi");
-    var locNuoc = document.getElementById("ctl_locNuoc");
-    var soNongLanh = document.getElementById("ctl_soNongLanh");
-    var maySuoi = document.getElementById("ctl_maySuoi");
-    var auto = document.getElementById("ctl_auto");
-    //- Check case if enable Auto will disable control mode
-    function checkAutoClick() {
-      console.log('Auto check ', auto.checked)
-      if (auto.checked == true) {
-        $('#ctl_mayBom').bootstrapToggle('disable');
-        $('#ctl_bomOxi').bootstrapToggle('disable');
-        $('#ctl_locNuoc').bootstrapToggle('disable');
-        $('#ctl_soNongLanh').bootstrapToggle('disable');
-        $('#ctl_maySuoi').bootstrapToggle('disable');
-        document.getElementById('setRange1').style.removeProperty("display");
-        document.getElementById('setRange2').style.removeProperty("display");
-        document.getElementById('setRange3').style.removeProperty("display");
-        document.getElementById("auto_status").src = "/images/led1.png";
-      } else {
-        $('#ctl_mayBom').bootstrapToggle('enable');
-        $('#ctl_bomOxi').bootstrapToggle('enable');
-        $('#ctl_locNuoc').bootstrapToggle('enable');
-        $('#ctl_soNongLanh').bootstrapToggle('enable');
-        $('#ctl_maySuoi').bootstrapToggle('enable');
-        document.getElementById('setRange1').style.display = "none";
-        document.getElementById('setRange2').style.display = "none";
-        document.getElementById('setRange3').style.display = "none";
-        document.getElementById("auto_status").src = "/images/led2.png";
-      }
-    }
-    function deviceChecked(id) {
-      console.log("ID : ", id);
-      if (id == 1) {
-        if (mayBom.checked == true) {
-          document.getElementById("maybom_status").src = "/images/led1.png";
-        } else {
-          document.getElementById("maybom_status").src = "/images/led2.png";
-        }
-      }
-      else if (id == 2) {
-        if (bomOxi.checked == true) {
-          document.getElementById("oxi_status").src = "/images/led1.png";
-        } else {
-          document.getElementById("oxi_status").src = "/images/led2.png";
-        }
-      }
-      else if (id == 3) {
-        if (locNuoc.checked == true) {
-          document.getElementById("loc_status").src = "/images/led1.png";
-        } else {
-          document.getElementById("loc_status").src = "/images/led2.png";
-        }
-      }
-      else if (id == 4) {
-        if (soNongLanh.checked == true) {
-          document.getElementById("so_status").src = "/images/led1.png";
-        } else {
-          document.getElementById("so_status").src = "/images/led2.png";
-        }
-      }else {
-        if (maySuoi.checked == true) {
-          document.getElementById("suoi_status").src = "/images/led1.png";
-        } else {
-          document.getElementById("suoi_status").src = "/images/led2.png";
-        }
-      }
-    }
-    console.log("autoCtr: ", auto.checked)
-  </script>
+  <script src="/js/control_view.js"></script>
 </body>
 
 </html>
