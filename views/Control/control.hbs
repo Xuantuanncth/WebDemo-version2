@@ -1,67 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/stylesheets/tab-bar.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/stylesheets/tab-bar.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 </head>
 
 <body>
-    
+
   <div class="container">
     {{>header}}
     <table class="table table-striped-columns">
       <thead>
         <tr class="table-primary">
-          <th colspan="4" style="margin: 50px; ;text-align: center; font-size:xx-large; color: rgb(255, 152, 33);"> Điều khiển thiết bị </th>
+          <th colspan="4" style="margin: 50px; ;text-align: center; font-size:xx-large; color: rgb(255, 152, 33);"> Điều
+            khiển thiết bị </th>
         </tr>
       </thead>
       <tbody class="table-group-divider">
         <tr>
           <td>Máy Bơm Nước</td>
           <td>
-            <input id="ctl_mayBom" type="checkbox" checked="" data-toggle="toggle" data-width="100" onchange="deviceChecked(1)">
+            <input id="ctl_mayBom" type="checkbox" checked="" data-toggle="toggle" data-width="100"
+              onchange="deviceChecked(1)">
           </td>
           <td>Trạng thái: Máy Bơm Nước</td>
-          <td><img class="img-fluid" src="/images/led1.png" alt="Image Title"></td>
+          <td>
+            <img class="img-fluid" src="/images/led1.png" alt="Image Title" id="maybom_status">
+          </td>
         </tr>
         <tr>
           <td>Máy Bơm OXI</td>
           <td>
-            <input id="ctl_bomOxi" type="checkbox" checked="" data-toggle="toggle" data-width="100" onchange="deviceChecked(2)">
+            <input id="ctl_bomOxi" type="checkbox" checked="" data-toggle="toggle" data-width="100"
+              onchange="deviceChecked(2)">
           </td>
           <td>Trạng thái: Máy Bơm OXI</td>
-          <td><img class="img-fluid" src="/images/led2.png" alt="Image Title"></td>
+          <td><img class="img-fluid" src="/images/led1.png" alt="Image Title" id="oxi_status"></td>
         </tr>
         <tr>
           <td>Máy Lọc Nước</td>
           <td>
-            <input id="ctl_locNuoc" type="checkbox" checked="" data-toggle="toggle" data-width="100" onchange="deviceChecked(3)">
+            <input id="ctl_locNuoc" type="checkbox" checked="" data-toggle="toggle" data-width="100"
+              onchange="deviceChecked(3)">
           </td>
           <td>Trạng thái: Máy Lọc Nước</td>
-          <td><img class="img-fluid" src="/images/led2.png" alt="Image Title"></td>
+          <td><img class="img-fluid" src="/images/led1.png" alt="Image Title" id="loc_status"></td>
         </tr>
         <tr>
           <td>Sò Làm Mát Máy</td>
           <td>
-            <input id="ctl_soNongLanh" type="checkbox" checked="" data-toggle="toggle" data-width="100" onchange="deviceChecked(4)">
+            <input id="ctl_soNongLanh" type="checkbox" checked="" data-toggle="toggle" data-width="100"
+              onchange="deviceChecked(4)">
           </td>
           <td>Trạng thái: Sò Làm Mát Máy</td>
-          <td><img class="img-fluid" src="/images/led2.png" alt="Image Title"></td>
+          <td><img class="img-fluid" src="/images/led1.png" alt="Image Title" id="so_status"></td>
         </tr>
         <tr>
           <td>Máy Sưởi Bể Cá</td>
           <td>
-            <input id="ctl_maySuoi" type="checkbox" checked="" data-toggle="toggle" data-width="100" onchange="deviceChecked(5)">
+            <input id="ctl_maySuoi" type="checkbox" checked="" data-toggle="toggle" data-width="100"
+              onchange="deviceChecked(5)">
           </td>
           <td>Trạng thái: Máy Sưởi Bể Cá</td>
-          <td><img class="img-fluid" src="/images/led2.png" alt="Image Title"></td>
+          <td><img class="img-fluid" src="/images/led1.png" alt="Image Title" id="suoi_status"></td>
         </tr>
         <tr>
           <td>Điều khiển tự động</td>
@@ -70,9 +80,84 @@
           </td>
           <td>Trạng thái Auto</td>
           <td>
-            <img class="img-fluid" src="/images/led1.png" alt="Image Title">
+            <img class="img-fluid" src="/images/led2.png" alt="Image Title" id="auto_status">
           </td>
         </tr>
+        <tr>
+      <tbody style="display:none" id="setRange1" class="table-group-divider">
+        <td>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Nồng độ OXI Max" aria-label="Nồng độ OXI Max"
+              aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button">Set</button>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Nồng độ OXI Min" aria-label="Nồng độ OXI Min"
+              aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button">Set</button>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Độ đục MAX" aria-label="Độ đục MAX"
+              aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button">Set</button>
+            </div>
+          </div>
+        </td>
+      </tbody>
+      </tr>
+           <tr>
+        <tbody style="display:none" id="setRange2">
+          <td>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Độ PH MAX" aria-label="Độ PH MAX"
+                aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Set</button>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Độ PH MIN" aria-label="Độ PH MIN"
+                aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Set</button>
+              </div>
+            </div>
+          </td>
+        </tbody>
+      </tr>
+      <tr>
+        <tbody style="display:none" id="setRange3">
+          <td>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Độ PH MAX" aria-label="Độ PH MAX"
+                aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Set</button>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Độ PH MIN" aria-label="Độ PH MIN"
+                aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Set</button>
+              </div>
+            </div>
+          </td>
+        </tbody>
+      </tr>
       </tbody>
     </table>
   </div>
@@ -92,16 +177,58 @@
         $('#ctl_locNuoc').bootstrapToggle('disable');
         $('#ctl_soNongLanh').bootstrapToggle('disable');
         $('#ctl_maySuoi').bootstrapToggle('disable');
+        document.getElementById('setRange1').style.removeProperty("display");
+        document.getElementById('setRange2').style.removeProperty("display");
+        document.getElementById('setRange3').style.removeProperty("display");
+        document.getElementById("auto_status").src = "/images/led1.png";
       } else {
         $('#ctl_mayBom').bootstrapToggle('enable');
         $('#ctl_bomOxi').bootstrapToggle('enable');
         $('#ctl_locNuoc').bootstrapToggle('enable');
         $('#ctl_soNongLanh').bootstrapToggle('enable');
         $('#ctl_maySuoi').bootstrapToggle('enable');
+        document.getElementById('setRange1').style.display = "none";
+        document.getElementById('setRange2').style.display = "none";
+        document.getElementById('setRange3').style.display = "none";
+        document.getElementById("auto_status").src = "/images/led2.png";
       }
     }
-    function deviceChecked(id){
+    function deviceChecked(id) {
       console.log("ID : ", id);
+      if (id == 1) {
+        if (mayBom.checked == true) {
+          document.getElementById("maybom_status").src = "/images/led1.png";
+        } else {
+          document.getElementById("maybom_status").src = "/images/led2.png";
+        }
+      }
+      else if (id == 2) {
+        if (bomOxi.checked == true) {
+          document.getElementById("oxi_status").src = "/images/led1.png";
+        } else {
+          document.getElementById("oxi_status").src = "/images/led2.png";
+        }
+      }
+      else if (id == 3) {
+        if (locNuoc.checked == true) {
+          document.getElementById("loc_status").src = "/images/led1.png";
+        } else {
+          document.getElementById("loc_status").src = "/images/led2.png";
+        }
+      }
+      else if (id == 4) {
+        if (soNongLanh.checked == true) {
+          document.getElementById("so_status").src = "/images/led1.png";
+        } else {
+          document.getElementById("so_status").src = "/images/led2.png";
+        }
+      }else {
+        if (maySuoi.checked == true) {
+          document.getElementById("suoi_status").src = "/images/led1.png";
+        } else {
+          document.getElementById("suoi_status").src = "/images/led2.png";
+        }
+      }
     }
     console.log("autoCtr: ", auto.checked)
   </script>
