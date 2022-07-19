@@ -12,4 +12,19 @@ router.get('/', function(req, res, next) {
     // }
 })
 
+router.get('/loadConfig', (req, res) => {
+    console.log("Req.query: ", req.query);
+    res.send({
+        autoControl: false,
+        bom_status: true,
+        oxi_status: true,
+        so_status: true,
+        suoi_status: true,
+        oxi_range: [20, 50],
+        duc_range: 30,
+        ph_range: [20, 30],
+        temp_range: [25, 35]
+    })
+});
+
 module.exports = router;
