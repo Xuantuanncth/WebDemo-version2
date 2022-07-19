@@ -24,19 +24,43 @@
       </thead>
       <tbody class="table-group-divider">
         <tr>
-          <td>Thiết bị 1</td>
+          <td>Máy Bơm Nước</td>
           <td>
-            <input id="ctl_device1" type="checkbox" checked="" data-toggle="toggle" data-width="100">
+            <input id="ctl_mayBom" type="checkbox" checked="" data-toggle="toggle" data-width="100" onchange="deviceChecked(1)">
           </td>
-          <td>Trạng thái thiết bị 1</td>
+          <td>Trạng thái: Máy Bơm Nước</td>
           <td><img class="img-fluid" src="/images/led1.png" alt="Image Title"></td>
         </tr>
         <tr>
-          <td>Thiết bị 2</td>
+          <td>Máy Bơm OXI</td>
           <td>
-            <input id="ctl_device2" type="checkbox" checked="" data-toggle="toggle" data-width="100">
+            <input id="ctl_bomOxi" type="checkbox" checked="" data-toggle="toggle" data-width="100" onchange="deviceChecked(2)">
           </td>
-          <td>Trạng thái thiết bị 2</td>
+          <td>Trạng thái: Máy Bơm OXI</td>
+          <td><img class="img-fluid" src="/images/led2.png" alt="Image Title"></td>
+        </tr>
+        <tr>
+          <td>Máy Lọc Nước</td>
+          <td>
+            <input id="ctl_locNuoc" type="checkbox" checked="" data-toggle="toggle" data-width="100" onchange="deviceChecked(3)">
+          </td>
+          <td>Trạng thái: Máy Lọc Nước</td>
+          <td><img class="img-fluid" src="/images/led2.png" alt="Image Title"></td>
+        </tr>
+        <tr>
+          <td>Sò Làm Mát Máy</td>
+          <td>
+            <input id="ctl_soNongLanh" type="checkbox" checked="" data-toggle="toggle" data-width="100" onchange="deviceChecked(4)">
+          </td>
+          <td>Trạng thái: Sò Làm Mát Máy</td>
+          <td><img class="img-fluid" src="/images/led2.png" alt="Image Title"></td>
+        </tr>
+        <tr>
+          <td>Máy Sưởi Bể Cá</td>
+          <td>
+            <input id="ctl_maySuoi" type="checkbox" checked="" data-toggle="toggle" data-width="100" onchange="deviceChecked(5)">
+          </td>
+          <td>Trạng thái: Máy Sưởi Bể Cá</td>
           <td><img class="img-fluid" src="/images/led2.png" alt="Image Title"></td>
         </tr>
         <tr>
@@ -45,27 +69,41 @@
             <input id="ctl_auto" type="checkbox" data-toggle="toggle" data-width="100" onchange="checkAutoClick()">
           </td>
           <td>Trạng thái Auto</td>
-          <td><img class="img-fluid" src="/images/led1.png" alt="Image Title"></td>
+          <td>
+            <img class="img-fluid" src="/images/led1.png" alt="Image Title">
+          </td>
         </tr>
       </tbody>
     </table>
   </div>
   <script>
-    var device1 = document.getElementById("ctl_device1");
-    var device2 = document.getElementById("ctl_device2");
+    let mayBom = document.getElementById("ctl_mayBom");
+    var bomOxi = document.getElementById("ctl_bomOxi");
+    var locNuoc = document.getElementById("ctl_locNuoc");
+    var soNongLanh = document.getElementById("ctl_soNongLanh");
+    var maySuoi = document.getElementById("ctl_maySuoi");
     var auto = document.getElementById("ctl_auto");
     //- Check case if enable Auto will disable control mode
     function checkAutoClick() {
       console.log('Auto check ', auto.checked)
       if (auto.checked == true) {
-        $('#ctl_device1').bootstrapToggle('disable');
-        $('#ctl_device2').bootstrapToggle('disable');
+        $('#ctl_mayBom').bootstrapToggle('disable');
+        $('#ctl_bomOxi').bootstrapToggle('disable');
+        $('#ctl_locNuoc').bootstrapToggle('disable');
+        $('#ctl_soNongLanh').bootstrapToggle('disable');
+        $('#ctl_maySuoi').bootstrapToggle('disable');
       } else {
-        $('#ctl_device1').bootstrapToggle('enable');
-        $('#ctl_device2').bootstrapToggle('enable');
+        $('#ctl_mayBom').bootstrapToggle('enable');
+        $('#ctl_bomOxi').bootstrapToggle('enable');
+        $('#ctl_locNuoc').bootstrapToggle('enable');
+        $('#ctl_soNongLanh').bootstrapToggle('enable');
+        $('#ctl_maySuoi').bootstrapToggle('enable');
       }
     }
-    console.log("autoCtr: ", autoCtr)
+    function deviceChecked(id){
+      console.log("ID : ", id);
+    }
+    console.log("autoCtr: ", auto.checked)
   </script>
 </body>
 
