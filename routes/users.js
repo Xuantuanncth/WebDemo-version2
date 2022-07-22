@@ -25,6 +25,17 @@ router.get('/login', function(req, res, next) {
     res.render('Users/login')
 });
 
+router.get('/logout', (req, res) => {
+    console.log('User logout');
+    req.session.destroy((error) => {
+        if (error) {
+            return console.log("error");
+        } else {
+            return res.redirect('/');
+        }
+    })
+})
+
 router.post('/user/register', function(req, res, next) {
     console.log(req.body);
     db.get('users').push(req.body).write();

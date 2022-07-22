@@ -13,13 +13,12 @@ let db = require('../db');
 
 router.get('/', function(req, res, next) {
     console.log("request: ", req.session)
-    res.render('Setting/SettingTime', { isLogin: true });
-    // if (req.session.userId) {
-    //     res.render('Setting/SettingTime', { isLogin: true });
-    // } else {
-    //     console.log('User no login')
-    //     res.send("Please Login")
-    // }
+        //res.render('Setting/SettingTime', { isLogin: true });
+    if (req.session.userId) {
+        res.render('Setting/SettingTime', { isLogin: true });
+    } else {
+        res.send("Please Login")
+    }
 })
 
 router.get('/loadTimeConfig', (req, res) => {
