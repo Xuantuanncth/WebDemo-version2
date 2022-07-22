@@ -38,16 +38,16 @@
         <tr>
           <td>
             <br>
-            <h4>Máy Bơm</h4>
+            <h4>Máy Bơm Nước </h4>
           </td>
           <td>
             <br>
-            <input type="checkbox" checked="" data-toggle="toggle" data-width="100">
+            <input id="btn_bomnuoc" type="checkbox"  data-toggle="toggle" data-width="100">
           </td>
           <td>Thời gian bật<br>
             <div class="form-group">
               <div class="input-group date" id="datetimepicker1_on">
-                <input class="form-control" id="bom_startTime" type="text">
+                <input class="form-control"  id="bom_startTime" type="text">
                 <span class="input-group-addon">
                   <span class="glyphicon glyphicon-calendar"></span>
                 </span>
@@ -57,7 +57,7 @@
           <td>Thời gian tắt<br>
             <div class="form-group">
               <div class="input-group date" id="datetimepicker1_off">
-                <input class="form-control" type="text" id="bom_stopTime"><span class="input-group-addon"><span
+                <input class="form-control"  type="text" id="bom_stopTime"><span class="input-group-addon"><span
                     class="glyphicon glyphicon-calendar"></span></span>
               </div>
             </div>
@@ -70,16 +70,17 @@
         <tr>
           <td>
             <br>
-            <h4>Thiết bị 2</h4>
+            <h4>Máy Bơm OXI</h4>
           </td>
           <td>
             <br>
-            <input type="checkbox" checked="" data-toggle="toggle" data-width="100">
+            <input id="btn_oxi" type="checkbox"  data-toggle="toggle" data-width="100">
           </td>
           <td>Thời gian bật<br>
             <div class="form-group">
               <div class="input-group date" id="datetimepicker2_on">
-                <input class="form-control" type="text"><span class="input-group-addon"><span
+                <input class="form-control"  type="text" id="oxi_startTime">
+                <span class="input-group-addon"><span
                     class="glyphicon glyphicon-calendar"></span></span>
               </div>
             </div>
@@ -87,88 +88,111 @@
           <td>Thời gian tắt<br>
             <div class="form-group">
               <div class="input-group date" id="datetimepicker2_off">
-                <input class="form-control" type="text"><span class="input-group-addon"><span
+                <input class="form-control"  type="text" id="oxi_stopTime">
+                <span class="input-group-addon"><span
                     class="glyphicon glyphicon-calendar"></span></span>
               </div>
             </div>
+          </td>
+          <td>
+            <br>
+            <button type="button" class="btn btn-primary" onclick="settingTime(2)">Set</button>
           </td>
         </tr>
         <tr>
           <td>
             <br>
-            <h4>Thiết bị 3</h4>
+            <h4>Máy Lọc Nước</h4>
           </td>
           <td>
             <br>
-            <input type="checkbox" checked="" data-toggle="toggle" data-width="100">
+            <input id="btn_locnuoc" type="checkbox"  data-toggle="toggle" data-width="100">
           </td>
           <td>Thời gian bật<br>
             <div class="form-group">
-              <div class="input-group date" id="datetimepicker2_on">
-                <input class="form-control" type="text"><span class="input-group-addon"><span
+              <div class="input-group date" id="datetimepicker3_on">
+                <input class="form-control"  type="text" id="loc_startTime">
+                <span class="input-group-addon"><span
                     class="glyphicon glyphicon-calendar"></span></span>
               </div>
             </div>
           </td>
           <td>Thời gian tắt<br>
             <div class="form-group">
-              <div class="input-group date" id="datetimepicker2_off">
-                <input class="form-control" type="text"><span class="input-group-addon"><span
+              <div class="input-group date" id="datetimepicker3_off">
+                <input class="form-control"  type="text" id="loc_stopTime">
+                <span class="input-group-addon"><span
                     class="glyphicon glyphicon-calendar"></span></span>
               </div>
             </div>
+          </td>
+          <td>
+            <br>
+            <button type="button" class="btn btn-primary" onclick="settingTime(3)">Set</button>
           </td>
         </tr>
         <tr>
           <td>
             <br>
-            <h4>Thiết bị 4</h4>
+            <h4>Sò Làm Mát Máy</h4>
           </td>
           <td>
             <br>
-            <input type="checkbox" checked="" data-toggle="toggle" data-width="100">
+            <input id="btn_So" type="checkbox"  data-toggle="toggle" data-width="100">
           </td>
           <td>Thời gian bật<br>
             <div class="form-group">
-              <div class="input-group date" id="datetimepicker2_on">
-                <input class="form-control" type="text"><span class="input-group-addon"><span
+              <div class="input-group date" id="datetimepicker4_on">
+                <input class="form-control"  type="text" id="so_startTime">
+                <span class="input-group-addon"><span
                     class="glyphicon glyphicon-calendar"></span></span>
               </div>
             </div>
           </td>
           <td>Thời gian tắt<br>
             <div class="form-group">
-              <div class="input-group date" id="datetimepicker2_off">
-                <input class="form-control" type="text"><span class="input-group-addon"><span
+              <div class="input-group date" id="datetimepicker4_off">
+                <input class="form-control"  type="text" id="so_stopTime">
+                <span class="input-group-addon"><span
                     class="glyphicon glyphicon-calendar"></span></span>
               </div>
             </div>
+          </td>
+          <td>
+            <br>
+            <button type="button" class="btn btn-primary" onclick="settingTime(4)">Set</button>
           </td>
         </tr>
         <tr>
           <td>
             <br>
-            <h4>Thiết bị 5</h4>
+            <h4>Máy Sưởi Bể Cá</h4>
           </td>
           <td>
             <br>
-            <input type="checkbox" checked="" data-toggle="toggle" data-width="100">
+            <input id="btn_maysuoi" type="checkbox"  data-toggle="toggle" data-width="100">
           </td>
           <td>Thời gian bật<br>
             <div class="form-group">
-              <div class="input-group date" id="datetimepicker2_on">
-                <input class="form-control" type="text"><span class="input-group-addon"><span
+              <div class="input-group date" id="datetimepicker5_on">
+                <input class="form-control"  type="text" id="maysuoi_startTime">
+                <span class="input-group-addon"><span
                     class="glyphicon glyphicon-calendar"></span></span>
               </div>
             </div>
           </td>
           <td>Thời gian tắt<br>
             <div class="form-group">
-              <div class="input-group date" id="datetimepicker2_off">
-                <input class="form-control" type="text"><span class="input-group-addon"><span
+              <div class="input-group date" id="datetimepicker5_off">
+                <input class="form-control"  type="text" id="maysuoi_stopTime">
+                <span class="input-group-addon"><span
                     class="glyphicon glyphicon-calendar"></span></span>
               </div>
             </div>
+          </td>
+          <td>
+            <br>
+            <button type="button" class="btn btn-primary" onclick="settingTime(5)">Set</button>
           </td>
         </tr>
         <tr>
@@ -178,12 +202,13 @@
           </td>
           <td>
             <br>
-            <input type="checkbox" checked="" data-toggle="toggle" data-width="100">
+            <input id="btn_auto" type="checkbox"  data-toggle="toggle" data-width="100">
           </td>
           <td>Thời gian bật<br>
             <div class="form-group">
               <div class="input-group date" id="datetimepickerAuto_on">
-                <input class="form-control" type="text"><span class="input-group-addon"><span
+                <input class="form-control"  type="text" id="auto_startTime">
+                <span class="input-group-addon"><span
                     class="glyphicon glyphicon-calendar"></span></span>
               </div>
             </div>
@@ -191,45 +216,21 @@
           <td>Thời gian tắt<br>
             <div class="form-group">
               <div class="input-group date" id="datetimepickerAuto_off">
-                <input class="form-control" type="text"><span class="input-group-addon"><span
+                <input class="form-control"  type="text" id="auto_stopTime">
+                <span class="input-group-addon"><span
                     class="glyphicon glyphicon-calendar"></span></span>
               </div>
             </div>
+          </td>
+          <td>
+            <br>
+            <button type="button" class="btn btn-primary" onclick="settingTime(6)">Set</button>d
           </td>
         </tr>
       </tbody>
     </table>
   </div>
-  <script>
-    $(function () {
-      $('#datetimepicker1_on').datetimepicker();
-    });
-    $(function () {
-      $('#datetimepicker1_off').datetimepicker();
-    });
-    $(function () {
-      $('#datetimepicker2_on').datetimepicker();
-    });
-    $(function () {
-      $('#datetimepicker2_off').datetimepicker();
-    });
-    $(function () {
-      $('#datetimepickerAuto_on').datetimepicker();
-    });
-    $(function () {
-      $('#datetimepickerAuto_off').datetimepicker();
-    });
-
-
-    let _bom_startTime = document.getElementById('bom_startTime');
-    let _bom_stopTime = document.getElementById('bom_stopTime')
-    function settingTime(id){
-      if(id == 1){
-        console.log('Start time: ',_bom_startTime.value);
-        console.log('Stop time: ',_bom_stopTime.value);
-      }
-    }
-  </script>
+  <script src="/js/settingtime_view.js"></script>
 </body>
 
 </html>

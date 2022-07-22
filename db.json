@@ -17,6 +17,96 @@
       "email": "xuantuanncth@gmail.com",
       "password": "!7agk6mrxSNNnPc",
       "confirm_password": "!7agk6mrxSNNnPc"
+    },
+    {
+      "username": "Đỗ Xuân Tuấn",
+      "email": "xuantuanncth@gmail.com",
+      "password": "123123",
+      "confirm_password": "123123"
+    }
+  ],
+  "deviceStatus": [
+    {
+      "id": "maybom",
+      "value": false
+    },
+    {
+      "id": "bomoxi",
+      "value": true
+    },
+    {
+      "id": "locnuoc",
+      "value": true
+    },
+    {
+      "id": "sononglanh",
+      "value": false
+    },
+    {
+      "id": "maysuoi",
+      "value": false
+    }
+  ],
+  "deviceRanger": [
+    {
+      "id": "oxiRangeMax",
+      "value": "234"
+    },
+    {
+      "id": "oxiRangeMin",
+      "value": "123"
+    },
+    {
+      "id": "ducRangeMax",
+      "value": "123"
+    },
+    {
+      "id": "pHRangeMax",
+      "value": "123"
+    },
+    {
+      "id": "phRangeMin",
+      "value": "123"
+    },
+    {
+      "id": "tempRangeMin",
+      "value": "123"
+    },
+    {
+      "id": "tempRangeMax",
+      "value": "123"
+    }
+  ],
+  "settingTime": [
+    {
+      "id": "maybom",
+      "start": "07/21/2022 2:14 PM",
+      "stop": "07/28/2022 2:15 PM"
+    },
+    {
+      "id": "bomoxi",
+      "start": "07/20/2022 1:34 PM",
+      "stop": "07/22/2022 1:34 PM"
+    },
+    {
+      "id": "locnuoc",
+      "start": "07/22/2022 1:34 PM",
+      "stop": "07/22/2022 1:34 PM"
+    },
+    {
+      "id": "sononglanh",
+      "start": "07/22/2022 1:34 PM",
+      "stop": "07/21/2022 1:34 PM"
+    },
+    {
+      "id": "auto",
+      "start": "07/22/2022 1:35 PM",
+      "stop": "07/22/2022 1:35 PM"
+    },
+    {
+      "id": "maysuoi",
+      "start": "07/22/2022 2:00 PM",
+      "stop": "07/22/2022 2:00 PM"
     }
   ]
 }

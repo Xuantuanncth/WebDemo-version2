@@ -87,28 +87,28 @@
           <tbody style="display:none" id="setRange1" class="table-group-divider">
             <td>
               <div class="input-group mb-3" style="display: table;">
-                <input type="text" class="form-control" placeholder="Nồng độ OXI Max" aria-label="Nồng độ OXI Max"
+                <input id="oxiRangeMax" type="text" class="form-control" placeholder="Nồng độ OXI Max" aria-label="Nồng độ OXI Max"
                   aria-describedby="basic-addon2" style="top: 12px;">
                 <div class="input-group-append" style="display: table-cell;">
-                  <button class="btn btn-outline-secondary" type="button" style="margin: 10px;">Set</button>
+                  <button class="btn btn-outline-secondary" type="button" style="margin: 10px;" onclick="settingRange('oxiRangeMax')">Set</button>
                 </div>
               </div>
             </td>
             <td>
               <div class="input-group mb-3" style="display: table;">
-                <input type="text" class="form-control" placeholder="Nồng độ OXI Min" aria-label="Nồng độ OXI Min"
+                <input id="oxiRangeMin" type="text" class="form-control" placeholder="Nồng độ OXI Min" aria-label="Nồng độ OXI Min"
                   aria-describedby="basic-addon2" style="top: 12px;">
                 <div class="input-group-append" style="display: table-cell;">
-                  <button class="btn btn-outline-secondary" type="button" style="margin: 10px;">Set</button>
+                  <button class="btn btn-outline-secondary" type="button" style="margin: 10px;" onclick="settingRange('oxiRangeMin')">Set</button>
                 </div>
               </div>
             </td>
             <td>
               <div class="input-group mb-3" style="display: table;">
-                <input type="text" class="form-control" placeholder="Độ đục MAX" aria-label="Độ đục MAX"
+                <input id="ducRangeMax" type="text" class="form-control" placeholder="Độ đục MAX" aria-label="Độ đục MAX"
                   aria-describedby="basic-addon2" style="top: 12px;">
                 <div class="input-group-append" style="display: table-cell;">
-                  <button class="btn btn-outline-secondary" type="button" style="margin: 10px;">Set</button>
+                  <button class="btn btn-outline-secondary" type="button" style="margin: 10px;" onclick="settingRange('ducRangeMax')">Set</button>
                 </div>
               </div>
             </td>
@@ -118,19 +118,19 @@
           <tbody style="display:none" id="setRange2">
             <td>
               <div class="input-group mb-3" style="display: table;">
-                <input type="text" class="form-control" placeholder="Độ PH MAX" aria-label="Độ PH MAX"
+                <input id="pHRangeMax" type="text" class="form-control" placeholder="Độ PH MAX" aria-label="Độ PH MAX"
                   aria-describedby="basic-addon2" style="top: 12px;">
                 <div class="input-group-append" style="display: table-cell;">
-                  <button class="btn btn-outline-secondary" type="button" style="margin: 10px;">Set</button>
+                  <button class="btn btn-outline-secondary" type="button" style="margin: 10px;" onclick="settingRange('pHRangeMax')">Set</button>
                 </div>
               </div>
             </td>
             <td>
               <div class="input-group mb-3" style="display: table;">
-                <input type="text" class="form-control" placeholder="Độ PH MIN" aria-label="Độ PH MIN"
+                <input id="phRangeMin" type="text" class="form-control" placeholder="Độ PH MIN" aria-label="Độ PH MIN"
                   aria-describedby="basic-addon2" style="top: 12px;">
                 <div class="input-group-append" style="display: table-cell;">
-                  <button class="btn btn-outline-secondary" type="button" style="margin: 10px;">Set</button>
+                  <button class="btn btn-outline-secondary" type="button" style="margin: 10px;" onclick="settingRange('phRangeMin')">Set</button>
                 </div>
               </div>
             </td>
@@ -140,19 +140,19 @@
           <tbody style="display:none" id="setRange3">
             <td>
               <div class="input-group mb-3" style="display: table;">
-                <input type="text" class="form-control" placeholder="Độ PH MAX" aria-label="Độ PH MAX"
+                <input id="tempRangeMin" type="text" class="form-control" placeholder="Nhiệt Độ MAX" aria-label="Độ PH MAX"
                   aria-describedby="basic-addon2" style="top: 12px;">
                 <div class="input-group-append" style="display: table-cell">
-                  <button class="btn btn-outline-secondary" type="button" style="margin: 10px;" style="margin: 10px;">Set</button>
+                  <button class="btn btn-outline-secondary" type="button" style="margin: 10px;" style="margin: 10px;" onclick="settingRange('tempRangeMin')">Set</button>
                 </div>
               </div>
             </td>
             <td>
               <div class="input-group mb-3" style="display: table;">
-                <input type="text" class="form-control" placeholder="Độ PH MIN" aria-label="Độ PH MIN"
+                <input id="tempRangeMax" type="text" class="form-control" placeholder="Nhiệt Độ MIN" aria-label="Độ PH MIN"
                   aria-describedby="basic-addon2" style="top: 12px;">
                 <div class="input-group-append" style="display: table-cell;">
-                  <button class="btn btn-outline-secondary" type="button" style="margin: 10px;">Set</button>
+                  <button class="btn btn-outline-secondary" type="button" style="margin: 10px;" onclick="settingRange('tempRangeMax')">Set</button>
                 </div>
               </div>
             </td>
