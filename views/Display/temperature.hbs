@@ -31,7 +31,7 @@
             </div>
             
             <h1>Nhiệt độ</h1>
-            <span class="temp">23&deg;C</span>
+            <span class="temp" id="s_temp">23&deg;C</span>
           </article>
           <!-- partial -->
         </div>
@@ -45,7 +45,7 @@
             </div>
             
             <h1>Độ pH</h1>
-            <span class="temp">23&deg;</span>
+            <span class="temp" id="s_ph">23</span>
 
           </article>
           <!-- partial -->
@@ -62,7 +62,7 @@
             </div>
             
             <h1>Độ oxi hòa tan</h1>
-            <span class="temp">23&deg;</span>
+            <span class="temp" id="s_oxi">23 %</span>
 
           </article>
           <!-- partial -->
@@ -77,7 +77,7 @@
             </div>
             
             <h1>Độ đục</h1>
-            <span class="temp">23&deg;</span>
+            <span class="temp" id="s_duc">23 %</span>
 
           </article>
           <!-- partial -->
@@ -85,9 +85,42 @@
       </div>
     </div>
   </div>
+<script>
+  
+//=============================//====================================//
+//      Feature                                            Status
+//-------------------------------------------------------------------//
+// Load setting time form database to front_end     :       Yes
+//=============================//====================================//
+
+let _temp = document.getElementById('s_temp');
+let _ph  = document.getElementById("s_ph");
+let _oxi = document.getElementById('s_oxi');
+let _duc  = document.getElementById("s_duc");
 
 
-
+window.onload = function loadTimeConfig() {
+    console.log("load Time Config ");
+    const url = '/display/loadData';
+    fetch(url).then((response) => {
+        console.log("Get local config");
+        response.json().then((data) => {
+            if (data.error) {
+                console.log("Data error: ", data.error);
+            } else {
+                console.log("Data: ", data);
+                parserData(data);
+            }
+        })
+    })
+}
+function parserData(data){
+  _temp.textContent = data.temp +"°C";
+  _ph.textContent =  data.ph ;
+  _oxi.textContent = data.oxi +"%";
+  _duc.textContent = data.duc +"%";
+}
+</script>
 </body>
 
 </html>

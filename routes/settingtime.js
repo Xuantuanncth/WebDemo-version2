@@ -6,7 +6,7 @@ let db = require('../db');
 //      Feature                                            Status
 //-------------------------------------------------------------------//
 // Insert setting time form front_end to Database   :       Yes
-// Load setting time form database to front_end     :       No
+// Load setting time form database to front_end     :       Yes
 // Send setting time to device                      :       No
 //=============================//====================================//
 

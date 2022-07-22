@@ -12,4 +12,14 @@ router.get('/', function(req, res, next) {
     // }
 })
 
+router.get('/loadData', (req, res) => {
+    console.log('Load config');
+    res.send({
+        temp: 25,
+        ph: 3,
+        oxi: 50,
+        duc: 20
+    })
+});
+
 module.exports = router;
