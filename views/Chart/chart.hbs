@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,85 +11,38 @@
     <link rel="stylesheet" href="/stylesheets/tab-bar.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Chart</title>
 </head>
+
 <body>
     <div class="container">
         {{>header}}
         <div style="width:1000px;height:500px">
-            <canvas id="firstChart" width="400" height="400"></canvas>
+            <canvas id="firstChart"></canvas>
         </div>
+        <br>
+        <button id="btn_test1" type="button" class="btn btn-primary">Primary</button>
+        <button id="btn_test2" type="button" class="btn btn-secondary">Secondary</button>
+        <button id="btn_test3" type="button" class="btn btn-success">Success</button>
+        <button id="btn_test4" type="button" class="btn btn-danger">Danger</button>
+        <br>
         <div style="width:1000px;height:500px">
-            <canvas id="secondChart" width="400" height="400"></canvas>
+            <canvas id="secondChart"></canvas>
         </div>
-        <script>
-            var ctx = document.getElementById('firstChart').getContext('2d');
-            var firstChart = new Chart(ctx,{
-                type:'bar',
-                data:{
-                    labels:["January", "February", "March", "April", "May", "June", "July"],
-                    datasets:[{
-                        label:"Test chart",
-                        data:[12, 19, 3, 5, 2, 3],
-                        backgroundColor:[
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor:[
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    aspectRatio:4
-                }
-            })
-
-        var ctx_2 = document.getElementById('secondChart').getContext('2d');
-        var secondChart = new Chart(ctx_2,{
-            type:'line',
-                data:{
-                    labels:["January", "February", "March", "April", "May", "June", "July"],
-                    datasets:[{
-                        label:"Test chart",
-                        data:[12, 19, 3, 5, 2, 3],
-                        backgroundColor:[
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor:[
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    aspectRatio:4
-                }
-            })
-        </script>
+        <br>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Chọn Tuần
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+        </div>
+        <br>
+        <script src="/js/chart.js"></script>
     </div>
 </body>
-</html>

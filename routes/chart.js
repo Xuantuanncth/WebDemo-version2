@@ -3,13 +3,13 @@ var router = express.Router();
 
 router.get('/', function(req, res, next) {
     console.log("request: ", req.session)
-        // res.render('Chart/Chart', { isLogin: true });
-    if (req.session.userId) {
-        res.render('Chart/Chart', { isLogin: true });
-    } else {
-        console.log('User no login')
-        res.send("Please Login")
-    }
+    res.render('Chart/Chart', { isLogin: true });
+    // if (req.session.userId) {
+    //     res.render('Chart/Chart', { isLogin: true });
+    // } else {
+    //     console.log('User no login')
+    //     res.send("Please Login")
+    // }
 })
 
 module.exports = router;
