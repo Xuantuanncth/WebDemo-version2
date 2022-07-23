@@ -19,29 +19,17 @@
     <div class="container">
         {{>header}}
         <div style="width:1000px;height:500px">
-            <canvas id="firstChart"></canvas>
-        </div>
-        <br>
-        <button id="btn_test1" type="button" class="btn btn-primary">Primary</button>
-        <button id="btn_test2" type="button" class="btn btn-secondary">Secondary</button>
-        <button id="btn_test3" type="button" class="btn btn-success">Success</button>
-        <button id="btn_test4" type="button" class="btn btn-danger">Danger</button>
-        <br>
-        <div style="width:1000px;height:500px">
             <canvas id="secondChart"></canvas>
         </div>
         <br>
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Chọn Tuần
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+        <div id="btnDate">
+            <button id="btn_test1" onclick="addButton()" type="button" class="btn btn-primary">Choose Date</button>
         </div>
+        <br>
+        <div style="width:1000px;height:500px">
+            <canvas id="firstChart"></canvas>
+        </div>
+        <br>
         <br>
         <script src="/js/chart.js"></script>
     </div>
