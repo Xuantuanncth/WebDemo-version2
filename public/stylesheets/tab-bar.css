@@ -299,3 +299,7 @@ body {
         display: block;
     }
 }
+
+.add_button {
+    margin: 10px;
+}

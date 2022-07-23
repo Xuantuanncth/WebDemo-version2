@@ -2,5 +2,6 @@
   "deviceStatus": [],
   "deviceRanger": [],
   "users": [],
-  "settingTime": []
+  "settingTime": [],
+  "day_dataSensor": []
 }
