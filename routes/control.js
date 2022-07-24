@@ -57,6 +57,41 @@ router.get('/getDevice', (req, res) => {
 
 })
 
+router.get('/ranger', (req, res) => {
+    console.log("Req.query:", req.query.value);
+    let data;
+    const getData = db.get('deviceRanger').value();
+    if (getData) {
+        if (req.query.value == 'oxi') {
+            data = sortData(getData, "oxiRangeMax", "oxiRangeMin");
+        } else if (req.query.value == 'temp') {
+            data = sortData(getData, "tempRangeMax", "tempRangeMin");
+        } else if (req.query.value == 'ph') {
+            data = sortData(getData, "pHRangeMax", "pHRangeMin");
+        } else if (req.query.value == 'duc') {
+            data = sortData(getData, "ducRangeMax", "");
+        } else {
+            return res.send('incorrect parameter');
+        }
+        res.status(200).send(data);
+    } else {
+        res.status(500).send("Not found");
+    }
+})
+
+function sortData(data, rangerMax, rangerMin) {
+    let max, min;
+    data.forEach(element => {
+        if (element.id == rangerMax) {
+            max = element.value;
+        } else if (element.id == rangerMin) {
+            min = element.value;
+        } else {
+            // Nothing to do
+        }
+    });
+    return { max, min }
+}
 router.get('/loadConfig', (req, res) => {
     try {
         const getData = db.get('deviceStatus').value();

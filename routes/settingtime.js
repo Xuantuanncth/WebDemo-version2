@@ -25,7 +25,6 @@ router.get('/loadTimeConfig', (req, res) => {
     try {
         let value = db.get('settingTime').value();
         if (value) {
-            console.log("Config time: ", value);
             res.status(200).send(value);
         } else {
             res.status(500).send('Can not find data');
@@ -35,15 +34,34 @@ router.get('/loadTimeConfig', (req, res) => {
     }
 });
 
+router.get('/timesetting', (req, res) => {
+    console.log("Get Setting time: ", req.query.value);
+    try {
+        let value = db.get('settingTime').value();
+        if (value) {
+            value.forEach(element => {
+                if (element.id == req.query.value) {
+                    let start = element.start;
+                    let stop = element.stop;
+                    return res.status(200).send({ start, stop });
+                }
+            });
+        } else {
+            res.status(500).send('Not found value');
+        }
+    } catch (error) {
+        console.log("Error: ");
+        res.status(500).send(error);
+    }
+})
+
 router.put('/settingConfigTime', (req, res) => {
     console.log("Setting time: ==================> ", req.body);
     try {
         const getData = db.get('settingTime').find({ id: req.body.id }).value();
         if (getData) {
-            console.log("Setting Time: ", getData);
             updateData(req.body.id, req.body.start, req.body.stop);
         } else {
-            console.log("Can't find data");
             createData(req.body.id, req.body.start, req.body.stop);
         }
         res.status(200).send("ok");
@@ -55,12 +73,10 @@ router.put('/settingConfigTime', (req, res) => {
 
 
 function updateData(id, _start, _stop) {
-    console.log("Update data ==========> 1 ");
     db.get('settingTime').find({ id: id }).assign({ start: _start, stop: _stop }).write();
 }
 
 function createData(id, _start, _stop) {
-    console.log("Create Data ===========> ")
     db.get('settingTime').push({
         id: id,
         start: _start,

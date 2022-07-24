@@ -7,40 +7,40 @@
 //=============================//====================================//
 
 $(function() {
-    $('#datetimepicker1_on').datetimepicker();
+    $('#datetimepicker1_on').datetimepicker({ format: 'HH:mm' });
 });
 $(function() {
-    $('#datetimepicker1_off').datetimepicker();
+    $('#datetimepicker1_off').datetimepicker({ format: 'HH:mm' });
 });
 $(function() {
-    $('#datetimepicker2_on').datetimepicker();
+    $('#datetimepicker2_on').datetimepicker({ format: 'HH:mm' });
 });
 $(function() {
-    $('#datetimepicker2_off').datetimepicker();
+    $('#datetimepicker2_off').datetimepicker({ format: 'HH:mm' });
 });
 $(function() {
-    $('#datetimepicker3_on').datetimepicker();
+    $('#datetimepicker3_on').datetimepicker({ format: 'HH:mm' });
 });
 $(function() {
-    $('#datetimepicker3_off').datetimepicker();
+    $('#datetimepicker3_off').datetimepicker({ format: 'HH:mm' });
 });
 $(function() {
-    $('#datetimepicker4_on').datetimepicker();
+    $('#datetimepicker4_on').datetimepicker({ format: 'HH:mm' });
 });
 $(function() {
-    $('#datetimepicker4_off').datetimepicker();
+    $('#datetimepicker4_off').datetimepicker({ format: 'HH:mm' });
 });
 $(function() {
-    $('#datetimepicker5_on').datetimepicker();
+    $('#datetimepicker5_on').datetimepicker({ format: 'HH:mm' });
 });
 $(function() {
-    $('#datetimepicker5_off').datetimepicker();
+    $('#datetimepicker5_off').datetimepicker({ format: 'HH:mm' });
 });
 $(function() {
-    $('#datetimepickerAuto_on').datetimepicker();
+    $('#datetimepickerAuto_on').datetimepicker({ format: 'HH:mm' });
 });
 $(function() {
-    $('#datetimepickerAuto_off').datetimepicker();
+    $('#datetimepickerAuto_off').datetimepicker({ format: 'HH:mm' });
 });
 
 

@@ -22,10 +22,39 @@
     },
     {
       "id": "auto",
-      "value": true
+      "value": false
     }
   ],
-  "deviceRanger": [],
+  "deviceRanger": [
+    {
+      "id": "oxiRangeMax",
+      "value": "10"
+    },
+    {
+      "id": "pHRangeMax",
+      "value": "14"
+    },
+    {
+      "id": "tempRangeMin",
+      "value": "16"
+    },
+    {
+      "id": "oxiRangeMin",
+      "value": "11"
+    },
+    {
+      "id": "phRangeMin",
+      "value": "15"
+    },
+    {
+      "id": "tempRangeMax",
+      "value": "17"
+    },
+    {
+      "id": "ducRangeMax",
+      "value": "12"
+    }
+  ],
   "users": [
     {
       "username": "Đỗ Xuân Tuấn",
@@ -37,8 +66,8 @@
   "settingTime": [
     {
       "id": "maybom",
-      "start": "07/23/2022 4:04 PM",
-      "stop": "07/23/2022 4:04 PM"
+      "start": "13:52",
+      "stop": "09:52"
     },
     {
       "id": "bom",
@@ -47,28 +76,28 @@
     },
     {
       "id": "locnuoc",
-      "start": "07/23/2022 4:04 PM",
-      "stop": "07/23/2022 4:04 PM"
+      "start": "08:04",
+      "stop": "07:04"
     },
     {
       "id": "sononglanh",
-      "start": "07/23/2022 4:04 PM",
-      "stop": "07/23/2022 4:04 PM"
+      "start": "10:04",
+      "stop": "07:03"
     },
     {
       "id": "maysuoi",
-      "start": "07/23/2022 4:04 PM",
-      "stop": "07/23/2022 4:04 PM"
+      "start": "10:04",
+      "stop": "07:01"
     },
     {
       "id": "auto",
-      "start": "07/23/2022 4:04 PM",
-      "stop": "07/23/2022 4:04 PM"
+      "start": "07:08",
+      "stop": "06:04"
     },
     {
       "id": "bomoxi",
-      "start": "07/24/2022 10:46 PM",
-      "stop": "07/24/2022 10:46 PM"
+      "start": "07:46",
+      "stop": "07:46"
     }
   ],
   "Data_Sensor": [
