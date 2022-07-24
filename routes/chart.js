@@ -19,7 +19,7 @@ router.get('/', function(req, res, next) {
     // }
 })
 
-router.get('/updateData', (req, res) => {
+router.put('/storeData', (req, res) => {
     console.log("==============> Device Connect: ", req.body);
     res.send("Ok");
 })

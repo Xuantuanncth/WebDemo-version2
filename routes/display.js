@@ -22,4 +22,9 @@ router.get('/loadData', (req, res) => {
     })
 });
 
+router.put('/updateData', (req, res) => {
+    console.log("==============> Device Connect: ", req.body);
+    res.send("Ok");
+})
+
 module.exports = router;
