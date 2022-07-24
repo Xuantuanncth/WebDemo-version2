@@ -1,133 +1,622 @@
 {
-    "deviceStatus": [],
-    "deviceRanger": [],
-    "users": [{
-        "username": "Đỗ Xuân Tuấn",
-        "email": "xuantuanncth@gmail.com",
-        "password": "123",
-        "confirm_password": "123"
-    }],
-    "settingTime": [{
-            "id": "maybom",
-            "start": "07/23/2022 4:04 PM",
-            "stop": "07/23/2022 4:04 PM"
+  "deviceStatus": [
+    {
+      "id": "maybom",
+      "value": true
+    },
+    {
+      "id": "bomoxi",
+      "value": true
+    },
+    {
+      "id": "locnuoc",
+      "value": true
+    },
+    {
+      "id": "sononglanh",
+      "value": true
+    },
+    {
+      "id": "maysuoi",
+      "value": true
+    },
+    {
+      "id": "auto",
+      "value": true
+    }
+  ],
+  "deviceRanger": [],
+  "users": [
+    {
+      "username": "Đỗ Xuân Tuấn",
+      "email": "xuantuanncth@gmail.com",
+      "password": "123",
+      "confirm_password": "123"
+    }
+  ],
+  "settingTime": [
+    {
+      "id": "maybom",
+      "start": "07/23/2022 4:04 PM",
+      "stop": "07/23/2022 4:04 PM"
+    },
+    {
+      "id": "bom",
+      "start": "07/23/2022 4:04 PM",
+      "stop": "07/23/2022 4:04 PM"
+    },
+    {
+      "id": "locnuoc",
+      "start": "07/23/2022 4:04 PM",
+      "stop": "07/23/2022 4:04 PM"
+    },
+    {
+      "id": "sononglanh",
+      "start": "07/23/2022 4:04 PM",
+      "stop": "07/23/2022 4:04 PM"
+    },
+    {
+      "id": "maysuoi",
+      "start": "07/23/2022 4:04 PM",
+      "stop": "07/23/2022 4:04 PM"
+    },
+    {
+      "id": "auto",
+      "start": "07/23/2022 4:04 PM",
+      "stop": "07/23/2022 4:04 PM"
+    },
+    {
+      "id": "bomoxi",
+      "start": "07/24/2022 10:46 PM",
+      "stop": "07/24/2022 10:46 PM"
+    }
+  ],
+  "Data_Sensor": [
+    {
+      "date": "23/7/2020",
+      "day": "Mon",
+      "data": [
+        {
+          "hour": "0h",
+          "value": {
+            "temp": 1,
+            "oxi": 11,
+            "pH": 7,
+            "duc": 1
+          }
         },
         {
-            "id": "bom",
-            "start": "07/23/2022 4:04 PM",
-            "stop": "07/23/2022 4:04 PM"
+          "hour": "3h",
+          "value": {
+            "temp": 2,
+            "oxi": 20,
+            "pH": 6,
+            "duc": 2
+          }
         },
         {
-            "id": "locnuoc",
-            "start": "07/23/2022 4:04 PM",
-            "stop": "07/23/2022 4:04 PM"
+          "hour": "6h",
+          "value": {
+            "temp": 3,
+            "oxi": 30,
+            "pH": 5,
+            "duc": 5
+          }
         },
         {
-            "id": "sononglanh",
-            "start": "07/23/2022 4:04 PM",
-            "stop": "07/23/2022 4:04 PM"
+          "hour": "9h",
+          "value": {
+            "temp": 4,
+            "oxi": 11,
+            "pH": 4,
+            "duc": 5
+          }
         },
         {
-            "id": "maysuoi",
-            "start": "07/23/2022 4:04 PM",
-            "stop": "07/23/2022 4:04 PM"
+          "hour": "12h",
+          "value": {
+            "temp": 5,
+            "oxi": 12,
+            "pH": 7,
+            "duc": 6
+          }
         },
         {
-            "id": "auto",
-            "start": "07/23/2022 4:04 PM",
-            "stop": "07/23/2022 4:04 PM"
+          "hour": "15h",
+          "value": {
+            "temp": 6,
+            "oxi": 14,
+            "pH": 8,
+            "duc": 8
+          }
+        },
+        {
+          "hour": "18h",
+          "value": {
+            "temp": 7,
+            "oxi": 16,
+            "pH": 9,
+            "duc": 9
+          }
+        },
+        {
+          "hour": "21h",
+          "value": {
+            "temp": 8,
+            "oxi": 16,
+            "pH": 9,
+            "duc": 9
+          }
         }
-    ],
-    "Data_Sensor": [{
-        "date": "23/7/2020",
-        "day": "Mon",
-        "data": [
-            { "hour": "0h", "value": { "temp": 1, "oxi": 11, "pH": 7, "duc": 1 } },
-            { "hour": "3h", "value": { "temp": 2, "oxi": 20, "pH": 6, "duc": 2 } },
-            { "hour": "6h", "value": { "temp": 3, "oxi": 30, "pH": 5, "duc": 5 } },
-            { "hour": "9h", "value": { "temp": 4, "oxi": 11, "pH": 4, "duc": 5 } },
-            { "hour": "12h", "value": { "temp": 5, "oxi": 12, "pH": 7, "duc": 6 } },
-            { "hour": "15h", "value": { "temp": 6, "oxi": 14, "pH": 8, "duc": 8 } },
-            { "hour": "18h", "value": { "temp": 7, "oxi": 16, "pH": 9, "duc": 9 } },
-            { "hour": "21h", "value": { "temp": 8, "oxi": 16, "pH": 9, "duc": 9 } }
-        ]
-    }, {
-        "date": "24/7/2020",
-        "day": "Tue",
-        "data": [
-            { "hour": "0h", "value": { "temp": 11, "oxi": 11, "pH": 7, "duc": 1 } },
-            { "hour": "3h", "value": { "temp": 22, "oxi": 20, "pH": 6, "duc": 2 } },
-            { "hour": "6h", "value": { "temp": 33, "oxi": 30, "pH": 5, "duc": 5 } },
-            { "hour": "9h", "value": { "temp": 44, "oxi": 11, "pH": 4, "duc": 5 } },
-            { "hour": "12h", "value": { "temp": 55, "oxi": 12, "pH": 7, "duc": 6 } },
-            { "hour": "15h", "value": { "temp": 66, "oxi": 14, "pH": 8, "duc": 8 } },
-            { "hour": "18h", "value": { "temp": 77, "oxi": 16, "pH": 9, "duc": 9 } },
-            { "hour": "21h", "value": { "temp": 88, "oxi": 16, "pH": 9, "duc": 9 } }
-        ]
-    }, {
-        "date": "25/7/2020",
-        "day": "Wed",
-        "data": [
-            { "hour": "0h", "value": { "temp": 20, "oxi": 11, "pH": 7, "duc": 1 } },
-            { "hour": "3h", "value": { "temp": 22, "oxi": 20, "pH": 6, "duc": 2 } },
-            { "hour": "6h", "value": { "temp": 1, "oxi": 30, "pH": 5, "duc": 5 } },
-            { "hour": "9h", "value": { "temp": 0, "oxi": 11, "pH": 4, "duc": 5 } },
-            { "hour": "12h", "value": { "temp": 3, "oxi": 12, "pH": 7, "duc": 6 } },
-            { "hour": "15h", "value": { "temp": 44, "oxi": 14, "pH": 8, "duc": 8 } },
-            { "hour": "18h", "value": { "temp": 55, "oxi": 16, "pH": 9, "duc": 9 } },
-            { "hour": "21h", "value": { "temp": 66, "oxi": 16, "pH": 9, "duc": 9 } }
-        ]
-    }, {
-        "date": "26/7/2020",
-        "day": "Thu",
-        "data": [
-            { "hour": "0h", "value": { "temp": 20, "oxi": 11, "pH": 7, "duc": 1 } },
-            { "hour": "3h", "value": { "temp": 22, "oxi": 20, "pH": 6, "duc": 2 } },
-            { "hour": "6h", "value": { "temp": 25, "oxi": 30, "pH": 5, "duc": 5 } },
-            { "hour": "9h", "value": { "temp": 30, "oxi": 11, "pH": 4, "duc": 5 } },
-            { "hour": "12h", "value": { "temp": 33, "oxi": 12, "pH": 7, "duc": 6 } },
-            { "hour": "15h", "value": { "temp": 25, "oxi": 14, "pH": 8, "duc": 8 } },
-            { "hour": "18h", "value": { "temp": 24, "oxi": 16, "pH": 9, "duc": 9 } },
-            { "hour": "21h", "value": { "temp": 24, "oxi": 16, "pH": 9, "duc": 9 } }
-        ]
-    }, {
-        "date": "27/7/2020",
-        "day": "Fir",
-        "data": [
-            { "hour": "0h", "value": { "temp": 20, "oxi": 11, "pH": 7, "duc": 1 } },
-            { "hour": "3h", "value": { "temp": 22, "oxi": 20, "pH": 6, "duc": 2 } },
-            { "hour": "6h", "value": { "temp": 25, "oxi": 30, "pH": 5, "duc": 5 } },
-            { "hour": "9h", "value": { "temp": 30, "oxi": 11, "pH": 4, "duc": 5 } },
-            { "hour": "12h", "value": { "temp": 33, "oxi": 12, "pH": 7, "duc": 6 } },
-            { "hour": "15h", "value": { "temp": 25, "oxi": 14, "pH": 8, "duc": 8 } },
-            { "hour": "18h", "value": { "temp": 24, "oxi": 16, "pH": 9, "duc": 9 } },
-            { "hour": "21h", "value": { "temp": 24, "oxi": 16, "pH": 9, "duc": 9 } }
-        ]
-    }, {
-        "date": "28/7/2020",
-        "day": "Sat",
-        "data": [
-            { "hour": "0h", "value": { "temp": 20, "oxi": 11, "pH": 7, "duc": 1 } },
-            { "hour": "3h", "value": { "temp": 22, "oxi": 20, "pH": 6, "duc": 2 } },
-            { "hour": "6h", "value": { "temp": 25, "oxi": 30, "pH": 5, "duc": 5 } },
-            { "hour": "9h", "value": { "temp": 30, "oxi": 11, "pH": 4, "duc": 5 } },
-            { "hour": "12h", "value": { "temp": 33, "oxi": 12, "pH": 7, "duc": 6 } },
-            { "hour": "15h", "value": { "temp": 25, "oxi": 14, "pH": 8, "duc": 8 } },
-            { "hour": "18h", "value": { "temp": 24, "oxi": 16, "pH": 9, "duc": 9 } },
-            { "hour": "21h", "value": { "temp": 24, "oxi": 16, "pH": 9, "duc": 9 } }
-        ]
-    }, {
-        "date": "29/7/2020",
-        "day": "Sun",
-        "data": [
-            { "hour": "0h", "value": { "temp": 20, "oxi": 11, "pH": 7, "duc": 1 } },
-            { "hour": "3h", "value": { "temp": 22, "oxi": 20, "pH": 6, "duc": 2 } },
-            { "hour": "6h", "value": { "temp": 25, "oxi": 30, "pH": 5, "duc": 5 } },
-            { "hour": "9h", "value": { "temp": 30, "oxi": 11, "pH": 4, "duc": 5 } },
-            { "hour": "12h", "value": { "temp": 33, "oxi": 12, "pH": 7, "duc": 6 } },
-            { "hour": "15h", "value": { "temp": 25, "oxi": 14, "pH": 8, "duc": 8 } },
-            { "hour": "18h", "value": { "temp": 24, "oxi": 16, "pH": 9, "duc": 9 } },
-            { "hour": "21h", "value": { "temp": 24, "oxi": 16, "pH": 9, "duc": 9 } }
-        ]
-    }]
+      ]
+    },
+    {
+      "date": "24/7/2020",
+      "day": "Tue",
+      "data": [
+        {
+          "hour": "0h",
+          "value": {
+            "temp": 11,
+            "oxi": 11,
+            "pH": 7,
+            "duc": 1
+          }
+        },
+        {
+          "hour": "3h",
+          "value": {
+            "temp": 22,
+            "oxi": 20,
+            "pH": 6,
+            "duc": 2
+          }
+        },
+        {
+          "hour": "6h",
+          "value": {
+            "temp": 33,
+            "oxi": 30,
+            "pH": 5,
+            "duc": 5
+          }
+        },
+        {
+          "hour": "9h",
+          "value": {
+            "temp": 44,
+            "oxi": 11,
+            "pH": 4,
+            "duc": 5
+          }
+        },
+        {
+          "hour": "12h",
+          "value": {
+            "temp": 55,
+            "oxi": 12,
+            "pH": 7,
+            "duc": 6
+          }
+        },
+        {
+          "hour": "15h",
+          "value": {
+            "temp": 66,
+            "oxi": 14,
+            "pH": 8,
+            "duc": 8
+          }
+        },
+        {
+          "hour": "18h",
+          "value": {
+            "temp": 77,
+            "oxi": 16,
+            "pH": 9,
+            "duc": 9
+          }
+        },
+        {
+          "hour": "21h",
+          "value": {
+            "temp": 88,
+            "oxi": 16,
+            "pH": 9,
+            "duc": 9
+          }
+        }
+      ]
+    },
+    {
+      "date": "25/7/2020",
+      "day": "Wed",
+      "data": [
+        {
+          "hour": "0h",
+          "value": {
+            "temp": 20,
+            "oxi": 11,
+            "pH": 7,
+            "duc": 1
+          }
+        },
+        {
+          "hour": "3h",
+          "value": {
+            "temp": 22,
+            "oxi": 20,
+            "pH": 6,
+            "duc": 2
+          }
+        },
+        {
+          "hour": "6h",
+          "value": {
+            "temp": 1,
+            "oxi": 30,
+            "pH": 5,
+            "duc": 5
+          }
+        },
+        {
+          "hour": "9h",
+          "value": {
+            "temp": 0,
+            "oxi": 11,
+            "pH": 4,
+            "duc": 5
+          }
+        },
+        {
+          "hour": "12h",
+          "value": {
+            "temp": 3,
+            "oxi": 12,
+            "pH": 7,
+            "duc": 6
+          }
+        },
+        {
+          "hour": "15h",
+          "value": {
+            "temp": 44,
+            "oxi": 14,
+            "pH": 8,
+            "duc": 8
+          }
+        },
+        {
+          "hour": "18h",
+          "value": {
+            "temp": 55,
+            "oxi": 16,
+            "pH": 9,
+            "duc": 9
+          }
+        },
+        {
+          "hour": "21h",
+          "value": {
+            "temp": 66,
+            "oxi": 16,
+            "pH": 9,
+            "duc": 9
+          }
+        }
+      ]
+    },
+    {
+      "date": "26/7/2020",
+      "day": "Thu",
+      "data": [
+        {
+          "hour": "0h",
+          "value": {
+            "temp": 20,
+            "oxi": 11,
+            "pH": 7,
+            "duc": 1
+          }
+        },
+        {
+          "hour": "3h",
+          "value": {
+            "temp": 22,
+            "oxi": 20,
+            "pH": 6,
+            "duc": 2
+          }
+        },
+        {
+          "hour": "6h",
+          "value": {
+            "temp": 25,
+            "oxi": 30,
+            "pH": 5,
+            "duc": 5
+          }
+        },
+        {
+          "hour": "9h",
+          "value": {
+            "temp": 30,
+            "oxi": 11,
+            "pH": 4,
+            "duc": 5
+          }
+        },
+        {
+          "hour": "12h",
+          "value": {
+            "temp": 33,
+            "oxi": 12,
+            "pH": 7,
+            "duc": 6
+          }
+        },
+        {
+          "hour": "15h",
+          "value": {
+            "temp": 25,
+            "oxi": 14,
+            "pH": 8,
+            "duc": 8
+          }
+        },
+        {
+          "hour": "18h",
+          "value": {
+            "temp": 24,
+            "oxi": 16,
+            "pH": 9,
+            "duc": 9
+          }
+        },
+        {
+          "hour": "21h",
+          "value": {
+            "temp": 24,
+            "oxi": 16,
+            "pH": 9,
+            "duc": 9
+          }
+        }
+      ]
+    },
+    {
+      "date": "27/7/2020",
+      "day": "Fir",
+      "data": [
+        {
+          "hour": "0h",
+          "value": {
+            "temp": 20,
+            "oxi": 11,
+            "pH": 7,
+            "duc": 1
+          }
+        },
+        {
+          "hour": "3h",
+          "value": {
+            "temp": 22,
+            "oxi": 20,
+            "pH": 6,
+            "duc": 2
+          }
+        },
+        {
+          "hour": "6h",
+          "value": {
+            "temp": 25,
+            "oxi": 30,
+            "pH": 5,
+            "duc": 5
+          }
+        },
+        {
+          "hour": "9h",
+          "value": {
+            "temp": 30,
+            "oxi": 11,
+            "pH": 4,
+            "duc": 5
+          }
+        },
+        {
+          "hour": "12h",
+          "value": {
+            "temp": 33,
+            "oxi": 12,
+            "pH": 7,
+            "duc": 6
+          }
+        },
+        {
+          "hour": "15h",
+          "value": {
+            "temp": 25,
+            "oxi": 14,
+            "pH": 8,
+            "duc": 8
+          }
+        },
+        {
+          "hour": "18h",
+          "value": {
+            "temp": 24,
+            "oxi": 16,
+            "pH": 9,
+            "duc": 9
+          }
+        },
+        {
+          "hour": "21h",
+          "value": {
+            "temp": 24,
+            "oxi": 16,
+            "pH": 9,
+            "duc": 9
+          }
+        }
+      ]
+    },
+    {
+      "date": "28/7/2020",
+      "day": "Sat",
+      "data": [
+        {
+          "hour": "0h",
+          "value": {
+            "temp": 20,
+            "oxi": 11,
+            "pH": 7,
+            "duc": 1
+          }
+        },
+        {
+          "hour": "3h",
+          "value": {
+            "temp": 22,
+            "oxi": 20,
+            "pH": 6,
+            "duc": 2
+          }
+        },
+        {
+          "hour": "6h",
+          "value": {
+            "temp": 25,
+            "oxi": 30,
+            "pH": 5,
+            "duc": 5
+          }
+        },
+        {
+          "hour": "9h",
+          "value": {
+            "temp": 30,
+            "oxi": 11,
+            "pH": 4,
+            "duc": 5
+          }
+        },
+        {
+          "hour": "12h",
+          "value": {
+            "temp": 33,
+            "oxi": 12,
+            "pH": 7,
+            "duc": 6
+          }
+        },
+        {
+          "hour": "15h",
+          "value": {
+            "temp": 25,
+            "oxi": 14,
+            "pH": 8,
+            "duc": 8
+          }
+        },
+        {
+          "hour": "18h",
+          "value": {
+            "temp": 24,
+            "oxi": 16,
+            "pH": 9,
+            "duc": 9
+          }
+        },
+        {
+          "hour": "21h",
+          "value": {
+            "temp": 24,
+            "oxi": 16,
+            "pH": 9,
+            "duc": 9
+          }
+        }
+      ]
+    },
+    {
+      "date": "29/7/2020",
+      "day": "Sun",
+      "data": [
+        {
+          "hour": "0h",
+          "value": {
+            "temp": 20,
+            "oxi": 11,
+            "pH": 7,
+            "duc": 1
+          }
+        },
+        {
+          "hour": "3h",
+          "value": {
+            "temp": 22,
+            "oxi": 20,
+            "pH": 6,
+            "duc": 2
+          }
+        },
+        {
+          "hour": "6h",
+          "value": {
+            "temp": 25,
+            "oxi": 30,
+            "pH": 5,
+            "duc": 5
+          }
+        },
+        {
+          "hour": "9h",
+          "value": {
+            "temp": 30,
+            "oxi": 11,
+            "pH": 4,
+            "duc": 5
+          }
+        },
+        {
+          "hour": "12h",
+          "value": {
+            "temp": 33,
+            "oxi": 12,
+            "pH": 7,
+            "duc": 6
+          }
+        },
+        {
+          "hour": "15h",
+          "value": {
+            "temp": 25,
+            "oxi": 14,
+            "pH": 8,
+            "duc": 8
+          }
+        },
+        {
+          "hour": "18h",
+          "value": {
+            "temp": 24,
+            "oxi": 16,
+            "pH": 9,
+            "duc": 9
+          }
+        },
+        {
+          "hour": "21h",
+          "value": {
+            "temp": 24,
+            "oxi": 16,
+            "pH": 9,
+            "duc": 9
+          }
+        }
+      ]
+    }
+  ]
 }

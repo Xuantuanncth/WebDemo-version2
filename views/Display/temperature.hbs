@@ -13,6 +13,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     <link rel="stylesheet" href="stylesheets/style2.css">
+    <script src="/socket.io/socket.io.js"></script>
     <title>Viewer</title>
 </head>
 <body>
@@ -97,6 +98,12 @@ let _temp = document.getElementById('s_temp');
 let _ph  = document.getElementById("s_ph");
 let _oxi = document.getElementById('s_oxi');
 let _duc  = document.getElementById("s_duc");
+
+const socket = io();
+
+socket.on("connect", () => {
+  console.log("Socket IO: ",socket.id); // x8WIv7-mJelg7on_ALbx
+});
 
 
 window.onload = function loadTimeConfig() {

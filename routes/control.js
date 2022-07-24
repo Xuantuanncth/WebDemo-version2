@@ -15,13 +15,46 @@ let db = require('../db');
 
 router.get('/', function(req, res, next) {
     console.log("request: ", req.session)
-        // res.render('Control/Control', { isLogin: true, autoCtr: false });
-    if (req.session.userId) {
-        res.render('Control/Control', { isLogin: true, autoCtr: false });
+    res.render('Control/Control', { isLogin: true, autoCtr: false });
+    // if (req.session.userId) {
+    //     res.render('Control/Control', { isLogin: true, autoCtr: false });
+    // } else {
+    //     console.log('User no login')
+    //     res.send("Please Login")
+    // }
+})
+
+router.get('/getAuto', (req, res) => {
+    console.log('GetAuto ======================> ');
+    const getData = db.get('deviceStatus').value();
+    if (getData) {
+        getData.forEach(element => {
+            if (element.id == "auto") {
+                let auto = element.value ? "1" : "0";
+                return res.status(200).send(auto);
+            }
+        });
     } else {
-        console.log('User no login')
-        res.send("Please Login")
+        console.log('Data not found');
+        res.status(200).send(0);
     }
+
+})
+
+router.get('/getDevice', (req, res) => {
+    console.log("Req.query:", req.query.value);
+    const getData = db.get('deviceStatus').value();
+    if (getData) {
+        getData.forEach(element => {
+            if (element.id == req.query.value) {
+                let data = element.value ? "1" : "0";
+                return res.status(200).send(data);
+            }
+        });
+    } else {
+        res.status(200).send("0");
+    }
+
 })
 
 router.get('/loadConfig', (req, res) => {

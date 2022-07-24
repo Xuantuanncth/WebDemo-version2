@@ -1,6 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
+//=============================//====================================//
+//      Feature                                            Status
+//-------------------------------------------------------------------//
+//  Load data from Database:                           :    No
+//  Store data form device :                           :    No
+//=============================//====================================//
 
 
 router.get('/', function(req, res, next) {
@@ -11,6 +17,11 @@ router.get('/', function(req, res, next) {
     //     console.log('User no login')
     //     res.send("Please Login")
     // }
+})
+
+router.get('/updateData', (req, res) => {
+    console.log("==============> Device Connect: ", req.body);
+    res.send("Ok");
 })
 
 module.exports = router;

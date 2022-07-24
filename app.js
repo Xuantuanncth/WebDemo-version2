@@ -75,12 +75,13 @@ app.use('/chart', chartData);
 
 
 io.on('connection', (socket) => {
-    console.log('New socket connection');
+    console.log('New socket connection ID: ', socket.id);
 
     socket.on('join', (option, callback) => {
         console.log(`ID: ${socket.id} , Data: ${option.data}`);
     })
 
+    socket.emit('event', { message: 'Connected !!!!' });
 
     socket.on('disconnect', () => {
         console.log(`User disconnect ${socket.id}`)

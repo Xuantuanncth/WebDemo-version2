@@ -43,12 +43,12 @@ function checkAutoClick() {
     if (auto.checked == true) {
         updateBootStrap('disable');
         enableStyle(true);
-        _auto_status.src = checkSrc(auto.checked);
     } else {
         updateBootStrap('enable');
         enableStyle(false);
-        _auto_status.src = checkSrc(auto.checked);
     }
+    _auto_status.src = checkSrc(auto.checked);
+    sendConfig(_data_status, "auto", auto.checked);
 }
 
 function deviceChecked(id) {
