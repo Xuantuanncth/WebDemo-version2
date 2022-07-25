@@ -73,6 +73,11 @@ app.use('/chart', chartData);
 //     res.render('error');
 // });
 
+app.put('/asyncButton', (req, res) => {
+    console.log("asyncButton ===========> ", req.body);
+    io.emit('updateData', req.body)
+    res.send("ok");
+})
 
 io.on('connection', (socket) => {
     console.log('New socket connection ID: ', socket.id);

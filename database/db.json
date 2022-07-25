@@ -14,14 +14,18 @@
     },
     {
       "id": "sononglanh",
-      "value": false
-    },
-    {
-      "id": "maysuoi",
       "value": true
     },
     {
+      "id": "maysuoi",
+      "value": false
+    },
+    {
       "id": "auto",
+      "value": false
+    },
+    {
+      "id": "e_auto",
       "value": true
     }
   ],
@@ -156,6 +160,15 @@
       "date": "25/7/2022",
       "day": "Tue",
       "data": [
+        {
+          "hour": "12h",
+          "value": {
+            "temp": "28",
+            "oxi": "14",
+            "pH": "8",
+            "duc": "8"
+          }
+        },
         {
           "hour": "12h",
           "value": {

@@ -1,7 +1,3 @@
-var express = require('express');
-var router = express.Router();
-let db = require('../db');
-
 //=============================//====================================//
 //      Feature                                            Status
 //-------------------------------------------------------------------//
@@ -9,9 +5,13 @@ let db = require('../db');
 //  Load status form Database:                         :    ok
 //  Insert Status form front_end to Database:          :    ok
 //  Insert Ranger setting form front_end to DataBase:  :    ok
-//  Send status to device:                             :    no
-//  Send Ranger Setting to device:                     :    no
+//  Send status to device:                             :    ok
+//  Send Ranger Setting to device:                     :    ok
 //=============================//====================================//
+
+var express = require('express');
+var router = express.Router();
+let db = require('../db');
 
 router.get('/', function(req, res, next) {
     console.log("request: ", req.session)
@@ -93,13 +93,6 @@ function sortData(data, rangerMax, rangerMin) {
     return { max, min }
 }
 router.get('/loadConfig', (req, res) => {
-    // let _status = {
-    //     autoControl: true,
-    //     bom_status: true,
-    //     oxi_status: true,
-    //     so_status: true,
-    //     suoi_status: true
-    // }
     try {
         const getData = db.get('deviceStatus').value();
         if (getData) {
@@ -133,13 +126,16 @@ router.put('/sendConfig', (req, res) => {
 
 })
 
+router.put('/asyncButton', (req, res) => {
+    console.log("asyncButton =========> ", req.body);
+    res.send("OK");
+})
+
 function updateData(select, id, data) {
-    // console.log("Update data ==========> 1 ");
     db.get(select).find({ id: id }).assign({ value: data }).write();
 }
 
 function createData(select, id, data) {
-    // console.log("createData ===========> ")
     db.get(select).push({
         id: id,
         value: data

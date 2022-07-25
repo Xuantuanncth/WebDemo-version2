@@ -1,9 +1,11 @@
-const mayBom = document.getElementById("ctl_mayBom");
-const bomOxi = document.getElementById("ctl_bomOxi");
-const locNuoc = document.getElementById("ctl_locNuoc");
-const soNongLanh = document.getElementById("ctl_soNongLanh");
-const maySuoi = document.getElementById("ctl_maySuoi");
-const auto = document.getElementById("ctl_auto");
+const socket = io()
+
+const e_mayBom = document.getElementById("ctl_mayBom");
+const e_bomOxi = document.getElementById("ctl_bomOxi");
+const e_locNuoc = document.getElementById("ctl_locNuoc");
+const e_soNongLanh = document.getElementById("ctl_soNongLanh");
+const e_maySuoi = document.getElementById("ctl_maySuoi");
+const e_auto = document.getElementById("ctl_auto");
 const _setRange1 = document.getElementById('setRange1');
 const _setRange2 = document.getElementById('setRange2');
 const _setRange3 = document.getElementById('setRange3');
@@ -40,17 +42,17 @@ function enableStyle(is_enable) {
 }
 
 function checkAutoClick() {
-    console.log('Auto check ', auto.checked)
-    if (auto.checked == true) {
+    console.log('Button Auto ', e_auto.checked)
+    if (e_auto.checked == true) {
         updateBootStrap('disable');
         enableStyle(true);
     } else {
         updateBootStrap('enable');
         enableStyle(false);
     }
-    _auto_status.src = checkSrc(auto.checked);
+    _auto_status.src = checkSrc(e_auto.checked);
     if (isFirst == false) {
-        sendConfig(_data_status, "auto", auto.checked);
+        sendConfig(_data_status, "auto", e_auto.checked);
     }
     isFirst = false;
 }
@@ -58,20 +60,20 @@ function checkAutoClick() {
 function deviceChecked(id) {
     console.log("ID : ", id);
     if (id == 1) {
-        _bom_status.src = checkSrc(mayBom.checked);
-        sendConfig(_data_status, "maybom", mayBom.checked);
+        _bom_status.src = checkSrc(e_mayBom.checked);
+        sendConfig(_data_status, "maybom", e_mayBom.checked);
     } else if (id == 2) {
-        _oxi_status.src = checkSrc(bomOxi.checked);
-        sendConfig(_data_status, "bomoxi", bomOxi.checked);
+        _oxi_status.src = checkSrc(e_bomOxi.checked);
+        sendConfig(_data_status, "bomoxi", e_bomOxi.checked);
     } else if (id == 3) {
-        _loc_status.src = checkSrc(locNuoc.checked);
-        sendConfig(_data_status, "locnuoc", locNuoc.checked);
+        _loc_status.src = checkSrc(e_locNuoc.checked);
+        sendConfig(_data_status, "locnuoc", e_locNuoc.checked);
     } else if (id == 4) {
-        _so_status.src = checkSrc(soNongLanh.checked);
-        sendConfig(_data_status, "sononglanh", soNongLanh.checked);
+        _so_status.src = checkSrc(e_soNongLanh.checked);
+        sendConfig(_data_status, "sononglanh", e_soNongLanh.checked);
     } else {
-        _suoi_status.src = checkSrc(maySuoi.checked);
-        sendConfig(_data_status, "maysuoi", maySuoi.checked);
+        _suoi_status.src = checkSrc(e_maySuoi.checked);
+        sendConfig(_data_status, "maysuoi", e_maySuoi.checked);
     }
 }
 
@@ -110,17 +112,23 @@ window.onload = function loadConfig() {
                 console.log("Data============>", data);
                 data.forEach(element => {
                     if (element.id == 'auto') {
-                        auto.checked = element.value;
+                        e_auto.checked = element.value;
+                        $('#ctl_auto').bootstrapToggle(element.value ? 'on' : 'off');
                     } else if (element.id == 'maybom') {
-                        mayBom.checked = element.value;
+                        e_mayBom.checked = element.value;
+                        $('#ctl_mayBom').bootstrapToggle(element.value ? 'on' : 'off');
                     } else if (element.id == 'bomoxi') {
-                        bomOxi.checked = element.value;
+                        e_bomOxi.checked = element.value;
+                        $('#ctl_bomOxi').bootstrapToggle(element.value ? 'on' : 'off');
                     } else if (element.id == 'locnuoc') {
-                        locNuoc.checked = element.value;
+                        e_locNuoc.checked = element.value;
+                        $('#ctl_locNuoc').bootstrapToggle(element.value ? 'on' : 'off');
                     } else if (element.id == 'sononglanh') {
-                        soNongLanh.checked == element.value;
+                        e_soNongLanh.checked == element.value;
+                        $('#ctl_soNongLanh').bootstrapToggle(element.value ? 'on' : 'off');
                     } else if (element.id == 'maysuoi') {
-                        maySuoi.checked == element.value;
+                        e_maySuoi.checked == element.value;
+                        $('#ctl_maySuoi').bootstrapToggle(element.value ? 'on' : 'off');
                     }
                 });
                 checkAutoClick();
@@ -128,3 +136,19 @@ window.onload = function loadConfig() {
         })
     })
 }
+
+socket.on('updateData', (data) => {
+    console.log('data ===========> : ', data);
+    e_auto.checked = data.auto;
+    $('#ctl_auto').bootstrapToggle(data.auto ? 'on' : 'off');
+    e_mayBom.checked = data.maybom;
+    $('#ctl_mayBom').bootstrapToggle(data.maybom ? 'on' : 'off');
+    e_bomOxi.checked = data.bomoxi;
+    $('#ctl_bomOxi').bootstrapToggle(data.bomoxi ? 'on' : 'off');
+    e_locNuoc.checked = data.locnuoc;
+    $('#ctl_locNuoc').bootstrapToggle(data.locnuoc ? 'on' : 'off');
+    e_soNongLanh.checked == data.sononglanh;
+    $('#ctl_soNongLanh').bootstrapToggle(data.sononglanh ? 'on' : 'off');
+    e_maySuoi.checked == data.maysuoi;
+    $('#ctl_maySuoi').bootstrapToggle(data.maysuoi ? 'on' : 'off');
+})

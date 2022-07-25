@@ -1,14 +1,14 @@
-var express = require('express');
-var router = express.Router();
-let db = require('../db');
-
 //=============================//====================================//
 //      Feature                                            Status
 //-------------------------------------------------------------------//
-// Insert setting time form front_end to Database   :       Yes
-// Load setting time form database to front_end     :       Yes
-// Send setting time to device                      :       No
+// Insert setting time form front_end to Database   :       Ok
+// Load setting time form database to front_end     :       Ok
+// Send setting time to device                      :       Ok
 //=============================//====================================//
+
+var express = require('express');
+var router = express.Router();
+let db = require('../db');
 
 
 router.get('/', function(req, res, next) {

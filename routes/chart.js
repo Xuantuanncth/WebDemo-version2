@@ -1,13 +1,13 @@
-var express = require('express');
-var router = express.Router();
-let db = require('../db');
-
 //=============================//====================================//
 //      Feature                                            Status
 //-------------------------------------------------------------------//
-//  Load data from Database:                           :    No
-//  Store data form device :                           :    No
+//  Load data from Database:                           :    Ok
+//  Store data form device :                           :    Ok
 //=============================//====================================//
+
+var express = require('express');
+var router = express.Router();
+let db = require('../db');
 
 let _data = [];
 
