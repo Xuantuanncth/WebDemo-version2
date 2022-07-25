@@ -14,7 +14,8 @@ const _loc_status = document.getElementById("loc_status");
 const _so_status = document.getElementById("so_status");
 const _suoi_status = document.getElementById("suoi_status");
 const _data_status = 'deviceStatus';
-const _data_config = 'deviceRanger'
+const _data_config = 'deviceRanger';
+let isFirst = false;
 
 //- Check case if enable Auto will disable control mode
 
@@ -48,7 +49,10 @@ function checkAutoClick() {
         enableStyle(false);
     }
     _auto_status.src = checkSrc(auto.checked);
-    sendConfig(_data_status, "auto", auto.checked);
+    if (isFirst == false) {
+        sendConfig(_data_status, "auto", auto.checked);
+    }
+    isFirst = false;
 }
 
 function deviceChecked(id) {
@@ -96,14 +100,29 @@ function sendConfig(dataConfig, id, value) {
 window.onload = function loadConfig() {
     console.log("Load config ");
     const url = '/control/loadConfig';
+    isFirst = true;
     fetch(url).then((response) => {
         console.log("Get local config");
         response.json().then((data) => {
             if (data.error) {
                 console.log("Data error: ", data.error);
             } else {
-                console.log("Data: ", data);
-                auto.checked = data.autoControl;
+                console.log("Data============>", data);
+                data.forEach(element => {
+                    if (element.id == 'auto') {
+                        auto.checked = element.value;
+                    } else if (element.id == 'maybom') {
+                        mayBom.checked = element.value;
+                    } else if (element.id == 'bomoxi') {
+                        bomOxi.checked = element.value;
+                    } else if (element.id == 'locnuoc') {
+                        locNuoc.checked = element.value;
+                    } else if (element.id == 'sononglanh') {
+                        soNongLanh.checked == element.value;
+                    } else if (element.id == 'maysuoi') {
+                        maySuoi.checked == element.value;
+                    }
+                });
                 checkAutoClick();
             }
         })

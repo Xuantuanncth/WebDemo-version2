@@ -13,99 +13,101 @@
 
 // ];
 
-let day_dataSensor = [{
-    date: '23/7/2020',
-    day: 'Mon',
-    data: [
-        { hour: '0h', value: { temp: 1, oxi: 11, pH: 7, duc: 1 } },
-        { hour: '3h', value: { temp: 2, oxi: 20, pH: 6, duc: 2 } },
-        { hour: '6h', value: { temp: 3, oxi: 30, pH: 5, duc: 5 } },
-        { hour: '9h', value: { temp: 4, oxi: 11, pH: 4, duc: 5 } },
-        { hour: '12h', value: { temp: 5, oxi: 12, pH: 7, duc: 6 } },
-        { hour: '15h', value: { temp: 6, oxi: 14, pH: 8, duc: 8 } },
-        { hour: '18h', value: { temp: 7, oxi: 16, pH: 9, duc: 9 } },
-        { hour: '21h', value: { temp: 8, oxi: 16, pH: 9, duc: 9 } }
-    ]
-}, {
-    date: '24/7/2020',
-    day: 'Tue',
-    data: [
-        { hour: '0h', value: { temp: 11, oxi: 11, pH: 7, duc: 1 } },
-        { hour: '3h', value: { temp: 22, oxi: 20, pH: 6, duc: 2 } },
-        { hour: '6h', value: { temp: 33, oxi: 30, pH: 5, duc: 5 } },
-        { hour: '9h', value: { temp: 44, oxi: 11, pH: 4, duc: 5 } },
-        { hour: '12h', value: { temp: 55, oxi: 12, pH: 7, duc: 6 } },
-        { hour: '15h', value: { temp: 66, oxi: 14, pH: 8, duc: 8 } },
-        { hour: '18h', value: { temp: 77, oxi: 16, pH: 9, duc: 9 } },
-        { hour: '21h', value: { temp: 88, oxi: 16, pH: 9, duc: 9 } }
-    ]
-}, {
-    date: '25/7/2020',
-    day: 'Wed',
-    data: [
-        { hour: '0h', value: { temp: 20, oxi: 11, pH: 7, duc: 1 } },
-        { hour: '3h', value: { temp: 22, oxi: 20, pH: 6, duc: 2 } },
-        { hour: '6h', value: { temp: 1, oxi: 30, pH: 5, duc: 5 } },
-        { hour: '9h', value: { temp: 0, oxi: 11, pH: 4, duc: 5 } },
-        { hour: '12h', value: { temp: 3, oxi: 12, pH: 7, duc: 6 } },
-        { hour: '15h', value: { temp: 44, oxi: 14, pH: 8, duc: 8 } },
-        { hour: '18h', value: { temp: 55, oxi: 16, pH: 9, duc: 9 } },
-        { hour: '21h', value: { temp: 66, oxi: 16, pH: 9, duc: 9 } }
-    ]
-}, {
-    date: '26/7/2020',
-    day: 'Thu',
-    data: [
-        { hour: '0h', value: { temp: 20, oxi: 11, pH: 7, duc: 1 } },
-        { hour: '3h', value: { temp: 22, oxi: 20, pH: 6, duc: 2 } },
-        { hour: '6h', value: { temp: 25, oxi: 30, pH: 5, duc: 5 } },
-        { hour: '9h', value: { temp: 30, oxi: 11, pH: 4, duc: 5 } },
-        { hour: '12h', value: { temp: 33, oxi: 12, pH: 7, duc: 6 } },
-        { hour: '15h', value: { temp: 25, oxi: 14, pH: 8, duc: 8 } },
-        { hour: '18h', value: { temp: 24, oxi: 16, pH: 9, duc: 9 } },
-        { hour: '21h', value: { temp: 24, oxi: 16, pH: 9, duc: 9 } }
-    ]
-}, {
-    date: '27/7/2020',
-    day: 'Fir',
-    data: [
-        { hour: '0h', value: { temp: 20, oxi: 11, pH: 7, duc: 1 } },
-        { hour: '3h', value: { temp: 22, oxi: 20, pH: 6, duc: 2 } },
-        { hour: '6h', value: { temp: 25, oxi: 30, pH: 5, duc: 5 } },
-        { hour: '9h', value: { temp: 30, oxi: 11, pH: 4, duc: 5 } },
-        { hour: '12h', value: { temp: 33, oxi: 12, pH: 7, duc: 6 } },
-        { hour: '15h', value: { temp: 25, oxi: 14, pH: 8, duc: 8 } },
-        { hour: '18h', value: { temp: 24, oxi: 16, pH: 9, duc: 9 } },
-        { hour: '21h', value: { temp: 24, oxi: 16, pH: 9, duc: 9 } }
-    ]
-}, {
-    date: '28/7/2020',
-    day: 'Sat',
-    data: [
-        { hour: '0h', value: { temp: 20, oxi: 11, pH: 7, duc: 1 } },
-        { hour: '3h', value: { temp: 22, oxi: 20, pH: 6, duc: 2 } },
-        { hour: '6h', value: { temp: 25, oxi: 30, pH: 5, duc: 5 } },
-        { hour: '9h', value: { temp: 30, oxi: 11, pH: 4, duc: 5 } },
-        { hour: '12h', value: { temp: 33, oxi: 12, pH: 7, duc: 6 } },
-        { hour: '15h', value: { temp: 25, oxi: 14, pH: 8, duc: 8 } },
-        { hour: '18h', value: { temp: 24, oxi: 16, pH: 9, duc: 9 } },
-        { hour: '21h', value: { temp: 24, oxi: 16, pH: 9, duc: 9 } }
-    ]
-}, {
-    date: '29/7/2020',
-    day: 'Sun',
-    data: [
-        { hour: '0h', value: { temp: 20, oxi: 11, pH: 7, duc: 1 } },
-        { hour: '3h', value: { temp: 22, oxi: 20, pH: 6, duc: 2 } },
-        { hour: '6h', value: { temp: 25, oxi: 30, pH: 5, duc: 5 } },
-        { hour: '9h', value: { temp: 30, oxi: 11, pH: 4, duc: 5 } },
-        { hour: '12h', value: { temp: 33, oxi: 12, pH: 7, duc: 6 } },
-        { hour: '15h', value: { temp: 25, oxi: 14, pH: 8, duc: 8 } },
-        { hour: '18h', value: { temp: 24, oxi: 16, pH: 9, duc: 9 } },
-        { hour: '21h', value: { temp: 24, oxi: 16, pH: 9, duc: 9 } }
-    ]
-}]
+// let day_dataSensor = [{
+//     date: '23/7/2020',
+//     day: 'Mon',
+//     data: [
+//         { hour: '0h', value: { temp: 1, oxi: 11, pH: 7, duc: 1 } },
+//         { hour: '3h', value: { temp: 2, oxi: 20, pH: 6, duc: 2 } },
+//         { hour: '6h', value: { temp: 3, oxi: 30, pH: 5, duc: 5 } },
+//         { hour: '9h', value: { temp: 4, oxi: 11, pH: 4, duc: 5 } },
+//         { hour: '12h', value: { temp: 5, oxi: 12, pH: 7, duc: 6 } },
+//         { hour: '15h', value: { temp: 6, oxi: 14, pH: 8, duc: 8 } },
+//         { hour: '18h', value: { temp: 7, oxi: 16, pH: 9, duc: 9 } },
+//         { hour: '21h', value: { temp: 8, oxi: 16, pH: 9, duc: 9 } }
+//     ]
+// }, {
+//     date: '24/7/2020',
+//     day: 'Tue',
+//     data: [
+//         { hour: '0h', value: { temp: 11, oxi: 11, pH: 7, duc: 1 } },
+//         { hour: '3h', value: { temp: 22, oxi: 20, pH: 6, duc: 2 } },
+//         { hour: '6h', value: { temp: 33, oxi: 30, pH: 5, duc: 5 } },
+//         { hour: '9h', value: { temp: 44, oxi: 11, pH: 4, duc: 5 } },
+//         { hour: '12h', value: { temp: 55, oxi: 12, pH: 7, duc: 6 } },
+//         { hour: '15h', value: { temp: 66, oxi: 14, pH: 8, duc: 8 } },
+//         { hour: '18h', value: { temp: 77, oxi: 16, pH: 9, duc: 9 } },
+//         { hour: '21h', value: { temp: 88, oxi: 16, pH: 9, duc: 9 } }
+//     ]
+// }, {
+//     date: '25/7/2020',
+//     day: 'Wed',
+//     data: [
+//         { hour: '0h', value: { temp: 20, oxi: 11, pH: 7, duc: 1 } },
+//         { hour: '3h', value: { temp: 22, oxi: 20, pH: 6, duc: 2 } },
+//         { hour: '6h', value: { temp: 1, oxi: 30, pH: 5, duc: 5 } },
+//         { hour: '9h', value: { temp: 0, oxi: 11, pH: 4, duc: 5 } },
+//         { hour: '12h', value: { temp: 3, oxi: 12, pH: 7, duc: 6 } },
+//         { hour: '15h', value: { temp: 44, oxi: 14, pH: 8, duc: 8 } },
+//         { hour: '18h', value: { temp: 55, oxi: 16, pH: 9, duc: 9 } },
+//         { hour: '21h', value: { temp: 66, oxi: 16, pH: 9, duc: 9 } }
+//     ]
+// }, {
+//     date: '26/7/2020',
+//     day: 'Thu',
+//     data: [
+//         { hour: '0h', value: { temp: 20, oxi: 11, pH: 7, duc: 1 } },
+//         { hour: '3h', value: { temp: 22, oxi: 20, pH: 6, duc: 2 } },
+//         { hour: '6h', value: { temp: 25, oxi: 30, pH: 5, duc: 5 } },
+//         { hour: '9h', value: { temp: 30, oxi: 11, pH: 4, duc: 5 } },
+//         { hour: '12h', value: { temp: 33, oxi: 12, pH: 7, duc: 6 } },
+//         { hour: '15h', value: { temp: 25, oxi: 14, pH: 8, duc: 8 } },
+//         { hour: '18h', value: { temp: 24, oxi: 16, pH: 9, duc: 9 } },
+//         { hour: '21h', value: { temp: 24, oxi: 16, pH: 9, duc: 9 } }
+//     ]
+// }, {
+//     date: '27/7/2020',
+//     day: 'Fir',
+//     data: [
+//         { hour: '0h', value: { temp: 20, oxi: 11, pH: 7, duc: 1 } },
+//         { hour: '3h', value: { temp: 22, oxi: 20, pH: 6, duc: 2 } },
+//         { hour: '6h', value: { temp: 25, oxi: 30, pH: 5, duc: 5 } },
+//         { hour: '9h', value: { temp: 30, oxi: 11, pH: 4, duc: 5 } },
+//         { hour: '12h', value: { temp: 33, oxi: 12, pH: 7, duc: 6 } },
+//         { hour: '15h', value: { temp: 25, oxi: 14, pH: 8, duc: 8 } },
+//         { hour: '18h', value: { temp: 24, oxi: 16, pH: 9, duc: 9 } },
+//         { hour: '21h', value: { temp: 24, oxi: 16, pH: 9, duc: 9 } }
+//     ]
+// }, {
+//     date: '28/7/2020',
+//     day: 'Sat',
+//     data: [
+//         { hour: '0h', value: { temp: 20, oxi: 11, pH: 7, duc: 1 } },
+//         { hour: '3h', value: { temp: 22, oxi: 20, pH: 6, duc: 2 } },
+//         { hour: '6h', value: { temp: 25, oxi: 30, pH: 5, duc: 5 } },
+//         { hour: '9h', value: { temp: 30, oxi: 11, pH: 4, duc: 5 } },
+//         { hour: '12h', value: { temp: 33, oxi: 12, pH: 7, duc: 6 } },
+//         { hour: '15h', value: { temp: 25, oxi: 14, pH: 8, duc: 8 } },
+//         { hour: '18h', value: { temp: 24, oxi: 16, pH: 9, duc: 9 } },
+//         { hour: '21h', value: { temp: 24, oxi: 16, pH: 9, duc: 9 } }
+//     ]
+// }, {
+//     date: '29/7/2020',
+//     day: 'Sun',
+//     data: [
+//         { hour: '0h', value: { temp: 20, oxi: 11, pH: 7, duc: 1 } },
+//         { hour: '3h', value: { temp: 22, oxi: 20, pH: 6, duc: 2 } },
+//         { hour: '6h', value: { temp: 25, oxi: 30, pH: 5, duc: 5 } },
+//         { hour: '9h', value: { temp: 30, oxi: 11, pH: 4, duc: 5 } },
+//         { hour: '12h', value: { temp: 33, oxi: 12, pH: 7, duc: 6 } },
+//         { hour: '15h', value: { temp: 25, oxi: 14, pH: 8, duc: 8 } },
+//         { hour: '18h', value: { temp: 24, oxi: 16, pH: 9, duc: 9 } },
+//         { hour: '21h', value: { temp: 24, oxi: 16, pH: 9, duc: 9 } }
+//     ]
+// }]
 
+
+let day_dataSensor = [];
 let d_dataSensor = [];
 let w_dataSensor = [];
 
@@ -280,7 +282,19 @@ function updateBarChart(chart, u_data, dateConfig) {
 
 window.onload = function loadConfig() {
     console.log("==============> Window onload ==============>");
-    // addButton();
+    const url = '/chart/loadTimeConfig';
+    fetch(url).then((response) => {
+        console.log("Get local config");
+        response.json().then((data) => {
+            if (data.error) {
+                console.log("Data error: ", data.error);
+            } else {
+                console.log("Data: ", data);
+                //parseDataConfig(data);
+                day_dataSensor = data;
+            }
+        })
+    })
 
 }
 

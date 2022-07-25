@@ -70,8 +70,6 @@ router.get('/ranger', (req, res) => {
             data = sortData(getData, "pHRangeMax", "pHRangeMin");
         } else if (req.query.value == 'duc') {
             data = sortData(getData, "ducRangeMax", "");
-        } else if (req.query.value == "temp") {
-            data = sortData(getData, "tempRangeMax", "tempRangeMin");
         } else {
             return res.send('incorrect parameter');
         }
@@ -95,23 +93,20 @@ function sortData(data, rangerMax, rangerMin) {
     return { max, min }
 }
 router.get('/loadConfig', (req, res) => {
+    // let _status = {
+    //     autoControl: true,
+    //     bom_status: true,
+    //     oxi_status: true,
+    //     so_status: true,
+    //     suoi_status: true
+    // }
     try {
         const getData = db.get('deviceStatus').value();
         if (getData) {
-            console.log("GetData: ", getData[0].value);
+            console.log("GetData ===========> ", getData);
             res.status(200).send(getData);
         } else {
-            res.status(500).send({
-                autoControl: true,
-                bom_status: true,
-                oxi_status: true,
-                so_status: true,
-                suoi_status: true,
-                oxi_range: [20, 50],
-                duc_range: 30,
-                ph_range: [20, 30],
-                temp_range: [25, 35]
-            });
+            res.status(500).send([]);
         }
     } catch (error) {
         res.status(500).send(error)
