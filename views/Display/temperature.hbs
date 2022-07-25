@@ -99,16 +99,21 @@ let _ph  = document.getElementById("s_ph");
 let _oxi = document.getElementById('s_oxi');
 let _duc  = document.getElementById("s_duc");
 
-const socket = io();
+//const socket = io();
 
-socket.on("connect", () => {
-  console.log("Socket IO: ",socket.id); // x8WIv7-mJelg7on_ALbx
-});
+//socket.on("connect", () => {
+//  console.log("Socket IO: ",socket.id); 
+//});
 
 
 window.onload = function loadTimeConfig() {
     console.log("load Time Config ");
-    const url = '/display/loadData';
+    loadingData();
+    
+}
+
+function loadingData(){
+  const url = '/display/loadData';
     fetch(url).then((response) => {
         console.log("Get local config");
         response.json().then((data) => {
@@ -121,6 +126,9 @@ window.onload = function loadTimeConfig() {
         })
     })
 }
+
+setInterval(loadingData, 5000);
+
 function parserData(data){
   _temp.textContent = data.temp +"°C";
   _ph.textContent =  data.ph ;

@@ -70,6 +70,8 @@ router.get('/ranger', (req, res) => {
             data = sortData(getData, "pHRangeMax", "pHRangeMin");
         } else if (req.query.value == 'duc') {
             data = sortData(getData, "ducRangeMax", "");
+        } else if (req.query.value == "temp") {
+            data = sortData(getData, "tempRangeMax", "tempRangeMin");
         } else {
             return res.send('incorrect parameter');
         }

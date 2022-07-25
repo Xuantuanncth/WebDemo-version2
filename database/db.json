@@ -36,7 +36,7 @@
     },
     {
       "id": "tempRangeMin",
-      "value": "16"
+      "value": "123"
     },
     {
       "id": "oxiRangeMin",
@@ -48,7 +48,7 @@
     },
     {
       "id": "tempRangeMax",
-      "value": "17"
+      "value": "100"
     },
     {
       "id": "ducRangeMax",
