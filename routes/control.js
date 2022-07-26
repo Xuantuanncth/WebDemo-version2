@@ -15,13 +15,13 @@ let db = require('../db');
 
 router.get('/', function(req, res, next) {
     console.log("request: ", req.session)
-    res.render('Control/Control', { isLogin: true, autoCtr: false });
-    // if (req.session.userId) {
-    //     res.render('Control/Control', { isLogin: true, autoCtr: false });
-    // } else {
-    //     console.log('User no login')
-    //     res.send("Please Login")
-    // }
+        //res.render('Control/Control', { isLogin: true, autoCtr: false });
+    if (req.session.userId) {
+        res.render('Control/Control', { isLogin: true, autoCtr: false });
+    } else {
+        console.log('User no login')
+        res.send("Please Login")
+    }
 })
 
 router.get('/getAuto', (req, res) => {

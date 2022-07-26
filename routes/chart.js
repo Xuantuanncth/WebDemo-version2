@@ -12,13 +12,13 @@ let db = require('../db');
 let _data = [];
 
 router.get('/', function(req, res, next) {
-    res.render('Chart/Chart', { isLogin: true });
-    // if (req.session.userId) {
-    //     res.render('Chart/Chart', { isLogin: true });
-    // } else {
-    //     console.log('User no login')
-    //     res.send("Please Login")
-    // }
+    //res.render('Chart/Chart', { isLogin: true });
+    if (req.session.userId) {
+        res.render('Chart/Chart', { isLogin: true });
+    } else {
+        console.log('User no login')
+        res.send("Please Login")
+    }
 })
 
 router.put('/storeData', (req, res) => {

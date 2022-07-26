@@ -16,13 +16,13 @@ let _duc = 0;
 
 router.get('/', function(req, res, next) {
     console.log("request: ", req.session)
-    res.render('Display/temperature', { isLogin: true });
-    // if (req.session.userId) {
-    //     res.render('Display/temperature', { isLogin: true });
-    // } else {
-    //     console.log('User no login')
-    //     res.send("Please Login")
-    // }
+        //res.render('Display/temperature', { isLogin: true });
+    if (req.session.userId) {
+        res.render('Display/temperature', { isLogin: true });
+    } else {
+        console.log('User no login')
+        res.send("Please Login")
+    }
 })
 
 router.get('/loadData', (req, res) => {
