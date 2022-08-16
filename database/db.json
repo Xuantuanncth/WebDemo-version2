@@ -65,6 +65,18 @@
       "email": "xuantuanncth@gmail.com",
       "password": "123",
       "confirm_password": "123"
+    },
+    {
+      "username": "Tdx1",
+      "email": "xuantuanncth@gmail.com",
+      "password": "aaa",
+      "confirm_password": "aaa"
+    },
+    {
+      "username": "XuanTuan123",
+      "email": "tuan@mail.com",
+      "password": "123123",
+      "confirm_password": "123123"
     }
   ],
   "settingTime": [
