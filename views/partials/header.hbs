@@ -14,7 +14,7 @@
       <li class="nav-item"></li>
       {{#if isLogin}}
       <a href="javascript:AlertIt();">
-          <img class="img-fluid" src="/icon/user.png" alt="Image" />
+          <img id="imgAcc" class="img-fluid" src="/icon/user.png" alt="Image" />
       </a>
         {{!-- <a class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1" href="/users/logout">Đăng Xuất</a> --}}
       {{else}}
@@ -34,7 +34,7 @@
   };
   function checkLogin(id){
     console.log("Check login");
-    if(isLogin){
+    if(document.getElementById("imgAcc")){
       if(id == 1){
         window.location="http://localhost:3000/display";
       } else if(id == 2){
